@@ -11,3 +11,5 @@
 /.vscode/
 /.idea/
 .liquidrc
+_site/feed.xml
+_site/sitemap.xml
