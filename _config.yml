@@ -4,9 +4,9 @@ description: 'This is the personal page of David Andersson, Security Architect. 
 permalink: ':title:output_ext'
 baseurl: "/davidandersson_se" # the subpath of your site, e.g. /blog
 url: "https://davand01.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-logo: "/assets/img/branding/MVM-logo-full.svg"
-logo-icon: "/assets/img/branding/MVM-symbol.svg"
-logo-icon-SEO: "/assets/img/branding/MVM-symbol-black.png" # must be a non SVG file
+logo: "/assets/img/branding/header-image-black-text.png"
+logo-icon: "/assets/img/branding/logo.svg"
+logo-icon-SEO: "/assets/img/branding/logo.svg" # must be a non SVG file
 
 # Night/Dark mode
 # Default mode is "auto", "auto" is for auto nightshift
@@ -20,14 +20,13 @@ logo-icon-SEO: "/assets/img/branding/MVM-symbol-black.png" # must be a non SVG f
 # the browser is closed or not)
 night_mode: "auto"
 
-logo-dark: "/assets/img/branding/MVM-logo-full-dark.svg"
+logo-dark: "/assets/img/branding/header-image-white-text.png"
 highlight_theme: syntax-base16.monokai.dark # select a dark theme for the code highlighter if needed
 
 # Author settings
 author: David Andersson # add your name
-author-pic: Myself_Neon_grey.jpg
-#about-author: Engineer, industry executive, research enthusiast. Avid learner with diverse interests in coding, machine learning, artificial intelligence and reinforcement learning. 17+ years of experience working in multinational corporations.
-about-author: Engineering leader, application security architect. 
+about-author: "<span style=\"display: block; text-align: center;\">Engineering leader, information security architect <br />20 years experience within the field </span><br /><span style=\"display: block; text-align: justify; font-size: 60%;\"> Business aligned IT and information security expert with both passion and talent for designing and implementing security architecture and governance that build security awareness across the organization. Creates and implements solutions that align with security standards and operational goals.<br />I will post blogs about things that interest me in the area of Information Security here<br /><br />⫸ Key skills: Application Security Programs, Information Security Management Systems, Risk Management, Cloud Security, Security Architecture, Security Management<br />⫸ CISSP, CISM, SCF, ISO 27001 LI</span>" 
+author-pic: david.jpg
 
 # Contact links
 email: info@davidandersson.se # Add your Email address
@@ -40,11 +39,11 @@ bandcamp:  # Add your Bandcamp username
 stackoverflow:  # Add your stackoverflow account
 
 # Newsletter
-#mailchimp: "https://github.us1.list-manage.com/subscribe/post?u=8ece198b3eb260e6838461a60&amp;id=397d90b5f4"
+#mailchimp: ""
 
 # Tracker
-#analytics: G-R8SZS2YBZK
-#fbadmin: ar.maybach
+#analytics: 
+#fbadmin: 
 
 # Paginate
 paginate: 6

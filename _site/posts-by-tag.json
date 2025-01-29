@@ -3,10 +3,20 @@
 [   
       
   {
-  "tag" : "application security",
+  "tag" : "OWASP SAMM",
   "posts" : [
       
-      "./making-metrics-matter.html"
+      "./5-recommendations-when-starting-an-appsec-program.html"
+      
+    ]
+  } ,
+    
+      
+  {
+  "tag" : "cyber security",
+  "posts" : [
+      
+      "./5-recommendations-when-starting-an-appsec-program.html"
       
     ]
   } ,
@@ -16,17 +26,47 @@
   "tag" : "metrics",
   "posts" : [
       
-      "./making-metrics-matter.html"
+      "./5-recommendations-when-starting-an-appsec-program.html"
       
     ]
   } ,
     
       
   {
-  "tag" : "program",
+  "tag" : "owasp",
   "posts" : [
       
-      "./making-metrics-matter.html"
+      "./5-recommendations-when-starting-an-appsec-program.html"
+      
+    ]
+  } ,
+    
+      
+  {
+  "tag" : "product security",
+  "posts" : [
+      
+      "./5-recommendations-when-starting-an-appsec-program.html"
+      
+    ]
+  } ,
+    
+      
+  {
+  "tag" : "sdlc",
+  "posts" : [
+      
+      "./5-recommendations-when-starting-an-appsec-program.html"
+      
+    ]
+  } ,
+    
+      
+  {
+  "tag" : "security champion",
+  "posts" : [
+      
+      "./5-recommendations-when-starting-an-appsec-program.html"
       
     ]
   } 
