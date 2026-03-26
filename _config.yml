@@ -2,8 +2,8 @@
 title: David Andersson
 description: 'David Andersson — Security engineering leader, CISSP, with nearly 20 years building and scaling security programs for software companies, government agencies, and global enterprises.'
 permalink: ':title:output_ext'
-baseurl: "/davidandersson_se"
-url: "https://davand01.github.io"
+baseurl: ""
+url: "https://www.davidandersson.se"
 logo-icon-SEO: "/assets/img/branding/logo.svg"
 
 # Author settings
@@ -14,19 +14,12 @@ author-pic: david.png
 email: info@davidandersson.se
 linkedin: davidandersson-se
 github: davand01
-twitter: ''
 
 # PGP / GPG
 pgp:
   fingerprint: "F104 53D7 C70F 054F CB32\n8185 03F0 AB3C 88DC 66BF"
   key_id: "0x03F0AB3C88DC66BF"
   public_key: "/assets/gpg/publickey.asc"
-
-# Newsletter
-#mailchimp: ""
-
-# Tracker
-#analytics:
 
 # Paginate
 paginate: 6
@@ -36,30 +29,13 @@ words_per_minute: 200
 extensions:
   mermaid_enable: true
 
-# Comments
-comments: #utteranc  #[disqus, utteranc]
-comments_opts:
-  comments_curtain: yes
-  repo:
-  issue_term:
-  label:
-  theme:
-  discus_identifier:
-
 # Build settings
 markdown: kramdown
 highlighter: rouge
 highlight_theme: syntax-base16.monokai.dark
-compress_html:
-  clippings: all
-  comments: all
-  startings: [html, head, body]
 
 # Outputting
 timezone: "Europe/Stockholm"
-
-sass:
-  style: compressed
 
 plugins:
   - jekyll-paginate
@@ -67,4 +43,4 @@ plugins:
   - jekyll-sitemap
 
 include: [_pages]
-exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/"]
+exclude: ["node_modules"]

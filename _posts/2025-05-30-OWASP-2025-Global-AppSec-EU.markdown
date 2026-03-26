@@ -13,7 +13,7 @@ author: David Andersson
 
 I had the opportunity to speak at **[OWASP Global AppSec 2025](https://owasp2025globalappseceu.sched.com/event/1whi0/metrics-that-matter-driving-appsec-success-with-data-driven-insights)** on the topic of _Metrics That Matter: Driving AppSec Success with Data-Driven Insights_.
 
-![Speaking at OWASP Global AppSec 2025 in Barcelona]({{ site.baseurl }}/assets/img/posts/20250530/david_a_speaker.jpg)
+![Speaking at OWASP Global AppSec 2025 in Barcelona](./assets/img/posts/20250530/david_a_speaker.jpg)
 
 ## Abstract
 
@@ -31,7 +31,7 @@ In many areas of life — application security included — what gets measured c
 
 ## Slides
 
-The slides are available on [sched.com](https://static.sched.com/hosted_files/owasp2025globalappseceu/00/DavidA-OWASP-Barcelona-Presentation.pdf) or as a [PDF download]({{ site.baseurl }}/assets/slides/DavidA-OWASP-Barcelona-Presentation.pdf).
+The slides are available on [sched.com](https://static.sched.com/hosted_files/owasp2025globalappseceu/00/DavidA-OWASP-Barcelona-Presentation.pdf) or as a [PDF download](./assets/slides/DavidA-OWASP-Barcelona-Presentation.pdf).
 
 ---
 

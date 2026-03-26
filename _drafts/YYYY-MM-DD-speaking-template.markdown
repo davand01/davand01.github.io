@@ -29,7 +29,7 @@ Link to slides if hosted externally (Speaker Deck, Google Slides, PDF in assets,
 Remove this section if no slides are available.
 {% endcomment %}
 
-The slides are available on [Speaker Deck](https://speakerdeck.example.com/your-talk) or as a [PDF download]({{ site.baseurl }}/assets/slides/talk-name.pdf).
+The slides are available on [Speaker Deck](https://speakerdeck.example.com/your-talk) or as a [PDF download](./assets/slides/talk-name.pdf).
 
 ## Recording
 

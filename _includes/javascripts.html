@@ -3,30 +3,6 @@
 
 <script src="{{ relativebase }}assets/js/jekyll-search.js"></script>
 
-{% if page.layout == "post" %}
-<script>
-  function copyToClipboard() {
-    navigator.clipboard.writeText('{{ site.url }}{{ page.url }}').then(function() {
-      var alerts = document.getElementsByClassName('alert');
-      for (var i = 0; i < alerts.length; i++) {
-        alerts[i].innerHTML = '\u00ABlink copied\u00BB';
-        setTimeout((function(i){ return function(){ alerts[i].innerHTML = ''; }; })(i), 1600);
-      }
-    });
-  }
-</script>
-{% endif %}
-
-{% if page.toc %}
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/gumshoe@5.1.1/dist/gumshoe.polyfills.min.js"></script>
-<script>
-  var spy = new Gumshoe("#toc-content a", {
-    navClass:"active", contentClass:"underline", nested:0,
-    nestedClass:"active", offset:20, reflow:1, events:1
-  });
-</script>
-{% endif %}
-
 {% if page.mathjax %}
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
