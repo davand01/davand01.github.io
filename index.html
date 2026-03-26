@@ -3,23 +3,145 @@ layout: home-page
 ---
 {% include calculate_relative_base.html %}
 
-<ol class="post-card-box clearfix">
-  {% for post in paginator.posts %}
-  {% include remove_double_slash.html %}
-  <li>
-    <div class="post-card">
-      <a href="{{ post_url }}" title="{{ post.title }}" class="post-card-image" style="background: url('{{ relativebase }}assets/img/{{ post.img }}') center no-repeat; background-size: cover;">
-      </a>
-      <div class="post-card-body">
-        <p class="post-card-title-and-meta">
-          
-          <a href="{{ post_url }}" class="post-card-link">
-          {{ post.title }}
-          </a>
-          {% include post_meta.html type="post-card-meta" date="none" %}
-        </p>
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 mb-24 md:mb-40">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
+    <div class="md:col-span-8">
+      <div class="inline-flex items-center px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-fixed text-xs font-bold tracking-widest uppercase mb-8">
+        <span class="material-symbols-outlined text-[14px] mr-2" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+        Security Architecture &amp; Engineering Leadership
+      </div>
+      <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface mb-8 leading-[1.1]">
+        Director of <br>
+        <span class="text-primary-dim">Security Engineering.</span>
+      </h1>
+      <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed text-balance">
+        Over two decades of experience building security programs that bridge the gap between executive strategy and engineering execution — from government agencies to high-growth SaaS.
+      </p>
+    </div>
+    <div class="md:col-span-4 flex justify-end">
+      {% if site.author-pic %}
+      <div class="relative group">
+        <div class="absolute -inset-4 bg-surface-container-high rounded-sm -z-10 group-hover:scale-105 transition-transform duration-500"></div>
+        <img alt="{{ site.author }}" class="w-full aspect-[4/5] object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-700" src="{{ relativebase }}assets/img/{{ site.author-pic }}">
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- Expertise Highlights -->
+<section class="bg-surface-container-low py-32">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+      <div>
+        <span class="font-label text-xs tracking-widest uppercase text-outline mb-4 block">Core Competencies</span>
+        <h2 class="font-headline text-4xl font-bold tracking-tight text-on-surface">What I Do</h2>
+      </div>
+      <div class="h-[2px] flex-grow bg-outline-variant/20 hidden md:block mb-3 mx-12"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-surface-container-lowest p-10 flex flex-col h-full border-l-4 border-primary">
+        <span class="material-symbols-outlined text-primary mb-8 text-4xl">account_tree</span>
+        <h3 class="font-headline text-2xl font-bold mb-4">Engineering Leadership</h3>
+        <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">Turning security strategy into engineering reality. Staff and budget ownership, building teams, and embedding security into the development lifecycle across distributed organizations.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-surface-container-high text-[10px] font-bold uppercase tracking-wider rounded-sm">Security Engineering</span>
+          <span class="px-2 py-1 bg-surface-container-high text-[10px] font-bold uppercase tracking-wider rounded-sm">Team Building</span>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest p-10 flex flex-col h-full border-l-4 border-tertiary">
+        <span class="material-symbols-outlined text-tertiary mb-8 text-4xl">encrypted</span>
+        <h3 class="font-headline text-2xl font-bold mb-4">Information Security</h3>
+        <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">Designing and implementing security programs grounded in ISO 27001, SOC 2, and risk management — from policy to production controls.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-wider rounded-sm">ISO 27001</span>
+          <span class="px-2 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-wider rounded-sm">Risk Management</span>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest p-10 flex flex-col h-full border-l-4 border-secondary">
+        <span class="material-symbols-outlined text-secondary mb-8 text-4xl">groups_3</span>
+        <h3 class="font-headline text-2xl font-bold mb-4">Advisory &amp; Consulting</h3>
+        <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">Senior advisory across industries — interim CISO engagements, security architecture reviews, and hands-on guidance for organizations building their security posture.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-surface-container-high text-[10px] font-bold uppercase tracking-wider rounded-sm">Interim CISO</span>
+          <span class="px-2 py-1 bg-surface-container-high text-[10px] font-bold uppercase tracking-wider rounded-sm">Security Architecture</span>
+        </div>
       </div>
     </div>
-  </li>
-  {% endfor %}
-</ol>
+  </div>
+</section>
+
+<!-- Latest Blog Previews -->
+<section class="py-32 bg-surface">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="flex justify-between items-baseline mb-16">
+      <h2 class="font-headline text-4xl font-bold tracking-tight">Technical Insights</h2>
+      <a class="font-label text-xs tracking-widest uppercase text-tertiary font-bold hover:underline no-underline" href="{{ relativebase }}archive.html">View All Articles</a>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <!-- Featured Article -->
+      {% assign latest = site.posts | first %}
+      {% if latest %}
+      {% capture latest_url %}{{ relativebase }}{{ latest.url }}{% endcapture %}
+      {% assign latest_url = latest_url | replace: "//", "/" %}
+      <a href="{{ latest_url }}" class="flex flex-col gap-6 group no-underline">
+        {% if latest.img %}
+        <img alt="{{ latest.title }}" class="w-full aspect-video object-cover rounded-sm" src="{{ relativebase }}assets/img/{{ latest.img }}">
+        {% else %}
+        <div class="w-full aspect-video bg-surface-container-high rounded-sm"></div>
+        {% endif %}
+        <div class="flex items-center gap-4">
+          <span class="font-label text-[10px] font-bold tracking-widest text-outline uppercase">{{ latest.date | date: "%B %Y" }}</span>
+          {% if latest.tags.size > 0 %}
+          <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+          <span class="font-label text-[10px] font-bold tracking-widest text-tertiary uppercase">{{ latest.tags | first }}</span>
+          {% endif %}
+        </div>
+        <h3 class="font-headline text-3xl font-bold leading-tight group-hover:text-tertiary transition-colors text-on-surface">{{ latest.title }}</h3>
+        <p class="text-on-surface-variant leading-relaxed">{{ latest.description | default: latest.content | markdownify | strip_html | truncatewords: 30 }}</p>
+      </a>
+      {% endif %}
+
+      <!-- Article List -->
+      <div class="flex flex-col divide-y divide-outline-variant/10">
+        {% for post in site.posts offset:1 limit:3 %}
+        {% capture p_url %}{{ relativebase }}{{ post.url }}{% endcapture %}
+        {% assign p_url = p_url | replace: "//", "/" %}
+        <a href="{{ p_url }}" class="py-8 first:pt-0 group cursor-pointer block no-underline">
+          <span class="font-label text-[10px] font-bold tracking-widest text-outline uppercase mb-3 block">{{ post.date | date: "%B %Y" }}</span>
+          <h4 class="font-headline text-xl font-bold text-on-surface group-hover:text-primary transition-colors">{{ post.title }}</h4>
+          <p class="text-sm text-on-surface-variant mt-2 line-clamp-2">{{ post.description | default: post.content | markdownify | strip_html | truncatewords: 25 }}</p>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-32 px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="bg-on-surface p-12 md:p-24 rounded-sm relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/></pattern></defs>
+          <rect width="100%" height="100%" fill="url(#grid)"/>
+        </svg>
+      </div>
+      <div class="relative z-10 max-w-2xl">
+        <h2 class="font-headline text-4xl md:text-5xl font-bold text-on-primary mb-8 tracking-tighter">Let's talk security.</h2>
+        <p class="text-on-secondary-container text-lg mb-12 opacity-80">Available for consulting engagements, advisory roles, and speaking opportunities. Let's find the right fit.</p>
+        <div class="flex flex-col sm:flex-row gap-6">
+          <a href="{{ relativebase }}contact.html" class="bg-gradient-to-br from-tertiary to-tertiary-dim text-on-tertiary px-8 py-4 font-label font-bold text-sm tracking-widest uppercase rounded-sm hover:opacity-90 transition-all flex items-center justify-center no-underline">
+            Get in Touch
+            <span class="material-symbols-outlined ml-3 text-[18px]">send</span>
+          </a>
+          <a href="{{ relativebase }}resume.html" class="border border-outline-variant/30 text-on-primary px-8 py-4 font-label font-bold text-sm tracking-widest uppercase rounded-sm hover:bg-white/5 transition-all no-underline text-center">
+            View Experience
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

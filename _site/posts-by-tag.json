@@ -26,6 +26,8 @@
   "tag" : "metrics",
   "posts" : [
       
+      "./OWASP-2025-Global-AppSec-EU.html",
+      
       "./5-recommendations-when-starting-an-appsec-program.html"
       
     ]
@@ -56,6 +58,8 @@
   "tag" : "sdlc",
   "posts" : [
       
+      "./OWASP-2025-Global-AppSec-EU.html",
+      
       "./5-recommendations-when-starting-an-appsec-program.html"
       
     ]
@@ -67,6 +71,16 @@
   "posts" : [
       
       "./5-recommendations-when-starting-an-appsec-program.html"
+      
+    ]
+  } ,
+    
+      
+  {
+  "tag" : "speaking",
+  "posts" : [
+      
+      "./OWASP-2025-Global-AppSec-EU.html"
       
     ]
   } 

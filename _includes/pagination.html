@@ -1,8 +1,22 @@
-<div class="pagination clearfix">
-  {% if paginator.previous_page %}
-    <a href="..{{ paginator.previous_page_path }}" class="previous"><i class="fa fa-angle-left" aria-hidden="true"></i> Previous</a>
-  {% endif %}
-  {% if paginator.next_page %}
-    <a href="..{{ paginator.next_page_path }}" class="next">Next <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  {% endif %}
-</div>
+{% if paginator.previous_page or paginator.next_page %}
+<section class="max-w-7xl mx-auto px-8 mt-24">
+  <div class="flex items-center justify-between border-t border-outline-variant/20 pt-8">
+    {% if paginator.previous_page %}
+    <a href="..{{ paginator.previous_page_path }}" class="flex items-center gap-2 text-xs font-label font-bold uppercase tracking-widest text-outline hover:text-on-surface transition-colors no-underline" rel="prev">
+      <span class="material-symbols-outlined">arrow_back</span>
+      Previous
+    </a>
+    {% else %}
+    <span></span>
+    {% endif %}
+    {% if paginator.next_page %}
+    <a href="..{{ paginator.next_page_path }}" class="flex items-center gap-2 text-xs font-label font-bold uppercase tracking-widest text-outline hover:text-on-surface transition-colors no-underline" rel="next">
+      Next
+      <span class="material-symbols-outlined">arrow_forward</span>
+    </a>
+    {% else %}
+    <span></span>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

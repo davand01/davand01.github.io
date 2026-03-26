@@ -1,6 +1,16 @@
 [
   
     {
+      "title"       : "Metrics That Matter: Driving AppSec Success with Data-Driven Insights (OWASP Global AppSec)",
+      "category"    : "",
+      "tags"        : "speaking, metrics, sdlc",
+      "url"         : "./OWASP-2025-Global-AppSec-EU.html",
+      "date"        : "2025-05-30 15:15:00 +0200",
+      "description" : "How to collect, visualize, and communicate actionable AppSec metrics that bridge the gap between security engineering and leadership priorities.",
+      "content"     : "I had the opportunity to speak at OWASP Global AppSec 2025 on the topic of Metrics That Matter: Driving AppSec Success with Data-Driven Insights.Abstract“What gets measured, gets managed” may be an over-simplification, but the quote has its merits. Building an effective application security program requires more than good tooling and policy — it requires proof that what you’re doing is working, and a clear way to communicate that to leadership.This session explores the full lifecycle of AppSec metrics: how to categorize qualitative and quantitative measures to align with frameworks that define metrics as a required control, how to choose the right metrics and visualize them to draw conclusions about program effectiveness, and how to use that data to drive improvement and support requests to leadership with evidence rather than intuition.In many areas of life — application security included — what gets measured can be proven, and what gets proven can be improved.Key takeaways Measure with purpose — distinguish between qualitative and quantitative metrics and align them with framework requirements Normalize intelligently — visualize metrics in ways that surface real trends and support actionable conclusions Make metrics actionable — use data to bridge the gap between security engineering and leadership’s strategic prioritiesSlidesThe slides are available on sched.com or as a PDF download.Presented at OWASP 2025 Global AppSec EU, Barcelona, Spain — May 30, 2025"
+    } ,
+  
+    {
       "title"       : "5 recommendations when starting an appsec program",
       "category"    : "",
       "tags"        : "product security, cyber security, OWASP SAMM, sdlc, security champion, owasp, metrics",

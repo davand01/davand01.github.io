@@ -2,67 +2,89 @@
 {% include escape-404.html %}
 
 <head>
-	<meta charset="utf-8">
-	<title>{% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{% endif %}</title>
-	<link rel="canonical" href="{{ site.url }}{{ page.url }}">
-	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	{% include SEO.html %}
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#311e3e">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#311e3e">
-	<!-- Google Fonts -->
-	<link rel="preconnect" href="https://fonts.gstatic.com" />
-	<style>
-/* latin */
-@font-face {
-  font-family: 'Lora';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/lora/v17/0QIvMX1D_JOuMwr7I_FMl_E.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin */
-@font-face {
-  font-family: 'Lora';
-  font-style: normal;
-  font-weight: 600;
-  src: url(https://fonts.gstatic.com/s/lora/v17/0QIvMX1D_JOuMwr7I_FMl_E.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 200;
-  src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlxdu3cOWxw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu3cOWxw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-	</style>
-	<!-- <link href="https://fonts.googleapis.com/css?family=Lora:400,600|Source+Sans+Pro:200,400,700" rel="stylesheet"> -->
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="{{ relativebase }}assets/fonts/font-awesome/css/font-awesome.min.css">
-	<!-- Styles -->
-	<link rel="stylesheet" href="{{ relativebase }}assets/css/main.css">
-	{% include favicon.html %}
-	{% if page.layout == 'post' %}
-	<link rel="stylesheet" href="{{ relativebase }}assets/css/highlighter/{{ site.highlight_theme }}.css">
-	{% endif %}
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% include SEO.html %}
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "secondary-container": "#d5e3fd",
+            "on-surface": "#2a3439",
+            "surface": "#f7f9fb",
+            "error": "#9f403d",
+            "primary": "#565e74",
+            "on-error": "#fff7f6",
+            "on-tertiary-fixed": "#00513b",
+            "on-primary-fixed-variant": "#535b71",
+            "inverse-surface": "#0b0f10",
+            "tertiary-dim": "#065f46",
+            "surface-bright": "#f7f9fb",
+            "surface-dim": "#cfdce3",
+            "surface-tint": "#565e74",
+            "error-container": "#fe8983",
+            "primary-fixed-dim": "#ccd4ee",
+            "outline": "#717c82",
+            "on-secondary-fixed": "#324054",
+            "primary-container": "#dae2fd",
+            "tertiary-fixed-dim": "#a3efce",
+            "on-background": "#2a3439",
+            "inverse-primary": "#dae2fd",
+            "tertiary": "#1c6b51",
+            "on-primary-fixed": "#373f54",
+            "primary-dim": "#4a5268",
+            "on-error-container": "#752121",
+            "inverse-on-surface": "#9a9d9f",
+            "on-tertiary": "#e5fff1",
+            "on-primary": "#f7f7ff",
+            "on-secondary": "#f8f8ff",
+            "on-secondary-fixed-variant": "#4e5c71",
+            "secondary-fixed": "#d5e3fd",
+            "on-primary-container": "#4a5167",
+            "on-tertiary-fixed-variant": "#216f55",
+            "surface-container": "#e8eff3",
+            "surface-container-lowest": "#ffffff",
+            "secondary-dim": "#465469",
+            "surface-variant": "#d9e4ea",
+            "secondary-fixed-dim": "#c7d5ee",
+            "tertiary-fixed": "#b1fedc",
+            "tertiary-container": "#b1fedc",
+            "surface-container-highest": "#d9e4ea",
+            "on-tertiary-container": "#11644b",
+            "surface-container-low": "#f0f4f7",
+            "secondary": "#526075",
+            "surface-container-high": "#e1e9ee",
+            "outline-variant": "#a9b4b9",
+            "error-dim": "#4e0309",
+            "on-surface-variant": "#566166",
+            "on-secondary-container": "#455367",
+            "primary-fixed": "#dae2fd",
+            "background": "#f7f9fb"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="{{ relativebase }}assets/css/main.css">
+  {% include favicon.html %}
+  {% if page.layout == 'post' %}
+  <link rel="stylesheet" href="{{ relativebase }}assets/css/highlighter/{{ site.highlight_theme }}.css">
+  {% endif %}
 </head>

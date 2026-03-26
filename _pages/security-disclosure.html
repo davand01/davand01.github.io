@@ -1,0 +1,37 @@
+---
+layout: menu-page
+title: Security Disclosure
+permalink: security-disclosure:output_ext
+---
+
+<section class="max-w-3xl mx-auto px-8">
+  <div class="prose text-on-surface-variant text-[1.05rem] leading-relaxed">
+    <p class="text-sm text-outline mb-8">Last updated: {{ site.time | date: "%B %-d, %Y" }}</p>
+
+    <h2>Responsible disclosure</h2>
+    <p>If you've found a security issue on this website or in one of my <a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">public repositories</a>, I'd appreciate hearing about it. I'm a security professional — I take these things seriously, and I'll treat your report with respect.</p>
+
+    <h2>How to report</h2>
+    <p>Send an email to <a href="mailto:{{ site.email }}">{{ site.email }}</a>{% if site.pgp %} — encrypted with my <a href="{{ site.pgp.public_key }}">PGP key</a> if you prefer{% endif %}. A useful report includes:</p>
+    <ul>
+      <li>What the vulnerability is and what it could lead to</li>
+      <li>Steps to reproduce</li>
+      <li>Any supporting evidence (screenshots, logs, proof-of-concept)</li>
+    </ul>
+
+    <h2>What to expect</h2>
+    <p>I'll acknowledge your report as soon as I can — typically within a few days. I'll keep you posted on progress and will credit you (with your permission) when a fix is published.</p>
+
+    <h2>Ground rules</h2>
+    <p>Please:</p>
+    <ul>
+      <li>Give me reasonable time to address the issue before going public</li>
+      <li>Don't exploit the vulnerability beyond what's needed to demonstrate it</li>
+      <li>Don't access or modify other people's data</li>
+      <li>Act in good faith</li>
+    </ul>
+
+    <h2>Safe harbor</h2>
+    <p>Security research conducted in line with these guidelines is welcome. I won't pursue legal action against anyone acting in good faith under this policy.</p>
+  </div>
+</section>

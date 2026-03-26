@@ -1,29 +1,108 @@
 ---
-layout: menu-page
-title: Archive
+layout: default
+title: Blog
 permalink: archive:output_ext
+description: Documenting the intersection of system architecture, cybersecurity protocols, and engineering leadership.
 infinite: yes
 ---
 {% include calculate_relative_base.html %}
+{% include header.html %}
 
-<div class="archive tag-master">
-	<form class="search-form inline">
-		<div id="search-container">
-			<input type="text" id="search-input" class="search" placeholder="Search">
-		</div>
-	</form>
-	<ul id="results-container" class="results-search"></ul>
-	<div class="post-list">
-	{% for post in site.posts limit: 3 %}
-		<div class="post">
-			{% include remove_double_slash.html %}
-			<a class="post-list-title" href="{{ post_url }}">{{ post.title }}</a>
-			{% include post_meta.html type="post-card-meta" %}
-			<div class="post-excerpt">
-				{{ post.content | markdownify | strip_newlines | truncatewords: 100 }}<a class="read-more" href="{{ post_url }}"> read more</a>
-			</div>
-		</div>
-	{% endfor %}
-	</div>
-</div>
-{% include spinner.html %}
+<main class="pt-32 pb-24">
+  <!-- Hero -->
+  <section class="max-w-7xl mx-auto px-8 mb-20">
+    <div class="md:max-w-3xl">
+      <span class="font-label text-xs tracking-widest uppercase text-tertiary font-semibold mb-4 block">Knowledge Base</span>
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter text-on-surface mb-6 leading-[1.1]">
+        Strategic Insights on Engineering &amp; Security.
+      </h1>
+      <p class="text-lg text-secondary max-w-2xl leading-relaxed">{{ page.description }}</p>
+    </div>
+  </section>
+
+  <!-- Search & Filter -->
+  <section class="max-w-7xl mx-auto px-8 mb-12">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-surface-container-low p-6 rounded-lg">
+      <div class="relative flex-1 max-w-md">
+        <span class="absolute inset-y-0 left-4 flex items-center text-outline">
+          <span class="material-symbols-outlined text-xl">search</span>
+        </span>
+        <input id="search-input" class="w-full bg-surface-container-lowest border-none py-3 pl-12 pr-4 text-sm focus:ring-1 focus:ring-tertiary rounded-sm transition-shadow shadow-sm" placeholder="Search articles..." type="text" autocomplete="off">
+      </div>
+      <div class="flex flex-wrap gap-2">
+        {% assign sorted_tags = site.tags | sort %}
+        {% for tag in sorted_tags limit:5 %}
+        <a href="{{ relativebase }}tag.html?tag={{ tag[0] | url_encode }}" class="px-4 py-2 bg-surface-container-highest text-secondary text-xs font-semibold uppercase tracking-wider rounded-sm hover:bg-surface-dim transition-all no-underline">{{ tag[0] }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <ul id="results-container" class="results-search max-w-7xl mx-auto"></ul>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="max-w-7xl mx-auto px-8">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+      {% for post in site.posts %}
+      {% include remove_double_slash.html %}
+
+      {% if forloop.first %}
+      <!-- Featured Post -->
+      <article class="md:col-span-12 group">
+        <a href="{{ post_url }}" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center no-underline">
+          {% if post.img %}
+          <div class="aspect-[16/9] overflow-hidden bg-surface-container-high rounded-sm">
+            <img alt="{{ post.title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ relativebase }}assets/img/{{ post.img }}">
+          </div>
+          {% else %}
+          <div class="aspect-[16/9] bg-surface-container-high rounded-sm"></div>
+          {% endif %}
+          <div class="flex flex-col justify-center">
+            <div class="flex items-center gap-4 mb-4">
+              {% if post.tags.size > 0 %}
+              <span class="bg-tertiary-container text-on-tertiary-fixed text-[10px] font-bold px-2 py-1 uppercase tracking-wider">{{ post.tags | first }}</span>
+              {% endif %}
+              <time class="text-xs font-label tracking-widest text-outline uppercase" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-on-surface mb-4 group-hover:text-tertiary transition-colors">{{ post.title }}</h2>
+            <p class="text-secondary leading-relaxed mb-6">{{ post.description | default: post.content | markdownify | strip_html | truncatewords: 30 }}</p>
+            <div class="flex items-center gap-2 text-tertiary font-semibold text-sm group-hover:gap-4 transition-all">
+              <span>Read Full Article</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      {% else %}
+      <!-- Regular Post Card -->
+      <article class="md:col-span-4 group flex flex-col">
+        <a href="{{ post_url }}" class="no-underline flex flex-col flex-grow">
+          {% if post.img %}
+          <div class="aspect-[4/3] bg-surface-container-low mb-6 overflow-hidden rounded-sm">
+            <img alt="{{ post.title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="{{ relativebase }}assets/img/{{ post.img }}">
+          </div>
+          {% else %}
+          <div class="aspect-[4/3] bg-surface-container-low mb-6 rounded-sm"></div>
+          {% endif %}
+          <div class="flex flex-col flex-grow">
+            <time class="text-[10px] font-label tracking-widest text-outline uppercase mb-2" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+            <h3 class="text-xl font-bold tracking-tight text-on-surface mb-3 group-hover:text-tertiary transition-colors">{{ post.title }}</h3>
+            <p class="text-sm text-secondary leading-relaxed mb-4 line-clamp-3">{{ post.description | default: post.content | markdownify | strip_html | truncatewords: 25 }}</p>
+            {% if post.tags.size > 0 %}
+            <div class="mt-auto flex gap-2">
+              <span class="text-[10px] font-label tracking-widest uppercase bg-surface-container-high px-2 py-1 text-on-surface-variant">{{ post.tags | first }}</span>
+            </div>
+            {% endif %}
+          </div>
+        </a>
+      </article>
+      {% endif %}
+
+      {% endfor %}
+    </div>
+  </section>
+
+  {% include pagination.html %}
+</main>
+
+{% include footer.html %}

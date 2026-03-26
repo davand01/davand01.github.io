@@ -4,41 +4,94 @@ layout: default
 {% include calculate_relative_base.html %}
 {% capture post_url %}{{ relativebase }}{{ page.url }}{% endcapture %}
 {% assign post_url = post_url | replace: "//", "/" %}
-<section class="hidden">
+
+<!-- Hidden structured data for search/SEO -->
+<section class="hidden-section">
   <div class="post">
-      <a  class="post-list-title" href="{{ post_url }}">{{ page.title }}</a>
-      {% include post_meta.html type="post-card-meta" %}
-        <div class="post-excerpt">
-            {{ page.content | markdownify | strip_newlines | truncatewords: 100 }}<a class="read-more" href="{{ post_url }}"> read more</a>
-        </div>
+    <a class="post-list-title" href="{{ post_url }}">{{ page.title }}</a>
+    {% include post_meta.html type="post-card-meta" %}
+    <div class="post-excerpt">
+      {{ page.content | markdownify | strip_newlines | truncatewords: 100 }}
+    </div>
   </div>
 </section>
-<div class="flex-container transparent">
-  {% include header.html %}
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+
+{% include header.html %}
+
+<main class="pt-32 pb-24">
+  <article class="max-w-7xl mx-auto px-8" itemscope itemtype="https://schema.org/CreativeWork">
     {% include schema-meta.html %}
-    <div class="page-image">
-      <div class="cover-image" style="background: url('{{ relativebase }}assets/img/{{ page.img }}') center no-repeat; background-size: cover;"></div>
-    </div>
-    <div class="wrapper">
-      <div class="page-content">
-        <div class="header-page">
-          <h1 class="page-title">{{ page.title }}</h1>
-          {% include post_meta.html type="post-page-meta" %}
-        </div>
-        {% include sidebar.html context="post" class="side" id="sidebar" %}
-        {% if page.toc %}{% include sidebar-toc.html %}{% endif %}
-        {% include github-button.html %}
-        {{page.content | markdownify}}
-        {% include sidebar.html context="post" class="inline" id="post-end" %}
-        <div class="separator"></div>
-        {% include author-box.html %}
-        {% include recent-post.html %}
-        {% include newsletter.html %}
-        {% include comments.html %}
+
+    <!-- Article Header -->
+    <section class="mb-12 md:max-w-3xl">
+      <div class="flex items-center gap-4 mb-6">
+        {% if page.tags.size > 0 %}
+        <span class="bg-tertiary-container text-on-tertiary-fixed text-[10px] font-bold px-3 py-1 uppercase tracking-wider rounded-full">{{ page.tags | first }}</span>
+        {% endif %}
+        {% if page.date %}
+        <time class="text-xs font-label tracking-widest text-outline uppercase" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        {% endif %}
       </div>
-    </div> <!-- End Wrapper -->
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-6 leading-[1.1]">{{ page.title }}</h1>
+      {% if page.description %}
+      <p class="text-lg text-secondary leading-relaxed max-w-2xl">{{ page.description }}</p>
+      {% endif %}
+      <div class="flex items-center gap-4 mt-8">
+        {% if site.author-pic %}
+        <img src="{{ relativebase }}assets/img/{{ site.author-pic }}" alt="{{ site.author }}" class="w-10 h-10 rounded-full object-cover">
+        {% endif %}
+        <div>
+          <div class="font-semibold text-sm text-on-surface">{{ page.author | default: site.author }}</div>
+          {% if page.read_time %}
+          {% assign words = page.content | strip_html | number_of_words %}
+          {% assign wpm = page.words_per_minute | default: site.words_per_minute | default: 200 %}
+          <div class="text-xs text-outline">{{ words | divided_by: wpm | at_least: 1 }} min read</div>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+
+    <!-- Cover Image -->
+    {% unless page.img_in_post == false %}
+    {% if page.img %}
+    <section class="mb-12">
+      <div class="aspect-[21/9] max-h-[480px] overflow-hidden rounded-sm bg-surface-container-high">
+        <img src="{{ relativebase }}assets/img/{{ page.img }}" alt="{{ page.title }}" class="w-full h-full object-cover">
+      </div>
+    </section>
+    {% endif %}
+    {% endunless %}
+
+    <!-- Article Content -->
+    <section class="max-w-3xl mx-auto">
+      <div class="prose text-on-surface-variant text-[1.05rem] leading-relaxed">
+        {{ page.content | markdownify }}
+      </div>
+
+      <!-- Tags -->
+      {% if page.tags.size > 0 %}
+      <div class="flex flex-wrap gap-2 mt-12 pt-8 border-t border-outline-variant/20">
+        {% for tag in page.tags %}
+        <a href="{{ relativebase }}tag.html?tag={{ tag | url_encode }}" class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase tracking-wider rounded-sm hover:bg-tertiary-container hover:text-on-tertiary-fixed transition-colors no-underline">{{ tag }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <!-- Share -->
+      <div class="flex items-center gap-6 mt-8 pt-8 border-t border-outline-variant/20">
+        <span class="text-xs font-label tracking-widest uppercase text-outline font-bold">Share</span>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank" rel="nofollow noopener" class="text-outline hover:text-tertiary transition-colors no-underline"><span class="material-symbols-outlined" style="font-size:20px">share</span></a>
+        <a href="mailto:?subject={{ page.title }}&body={{ page.description | default: '' }}%0A%0A{{ site.url }}{{ page.url }}" rel="nofollow" class="text-outline hover:text-tertiary transition-colors no-underline"><span class="material-symbols-outlined" style="font-size:20px">mail</span></a>
+      </div>
+
+      <div class="my-16">
+        {% include author-box.html %}
+      </div>
+
+      {% include newsletter.html %}
+      {% include comments.html %}
+    </section>
   </article>
-  {% include search.html %}
-  {% include footer.html %}
-</div>
+</main>
+
+{% include footer.html %}

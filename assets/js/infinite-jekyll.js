@@ -1,99 +1,108 @@
-$(function() {
+(function() {
   'use strict';
-  
+
   var postURLs,
       isFetchingPosts = false,
       shouldFetchPosts = true;
-  
-  // Load the JSON file containing all URLs
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  
-  // If a tag was passed as a url parameter then use it to filter the urls
-  if (urlParams.has('tag')){
-    const tag = urlParams.get('tag');
-    document.getElementById(tag).classList.toggle('hidden');
-    $.getJSON('./posts-by-tag.json', function(data) {
-        let tag_item = data.find(el => el.tag === tag);
-        postURLs = tag_item["posts"];
-        // If there aren't any more posts available to load than already visible, disable fetching
-        if (postURLs.length <= postsToLoad)
-        disableFetching();
-    });
-  } else {
-      $.getJSON('./all-posts.json', function(data) {
-        postURLs = data["posts"];
-        // If there aren't any more posts available to load than already visible, disable fetching
-        if (postURLs.length <= postsToLoad)
-          disableFetching();
-      });
+
+  var urlParams = new URLSearchParams(window.location.search);
+
+  function getJSON(url, cb) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        cb(JSON.parse(xhr.responseText));
+      }
+    };
+    xhr.send();
   }
 
-  var postsToLoad = $(".tag-master:not(.hidden) .post-list").children().length,
-      loadNewPostsThreshold = 10;
+  if (urlParams.has('tag')) {
+    var tag = urlParams.get('tag');
+    var tagEl = document.getElementById(tag);
+    if (tagEl) tagEl.classList.remove('hidden');
 
-  // If there's no spinner, it's not a page where posts should be fetched
-  if ($(".spinner").length < 1)
-    shouldFetchPosts = false;
-	
-  // Are we close to the end of the page? If we are, load more posts
-  $(window).scroll(function(e){
+    getJSON('./posts-by-tag.json', function(data) {
+      var tagItem = data.find(function(el) { return el.tag === tag; });
+      if (tagItem) postURLs = tagItem.posts;
+      if (!postURLs || postURLs.length <= postsToLoad) disableFetching();
+    });
+  } else {
+    getJSON('./all-posts.json', function(data) {
+      postURLs = data.posts;
+      if (!postURLs || postURLs.length <= postsToLoad) disableFetching();
+    });
+  }
+
+  var visibleMaster = document.querySelector('.tag-master:not(.hidden)');
+  var postList = visibleMaster ? visibleMaster.querySelector('.post-list') : null;
+  var postsToLoad = postList ? postList.children.length : 3;
+  var loadNewPostsThreshold = 10;
+
+  var spinner = document.querySelector('.spinner');
+  if (!spinner) shouldFetchPosts = false;
+
+  window.addEventListener('scroll', function() {
     if (!shouldFetchPosts || isFetchingPosts) return;
-    
-    var windowHeight = $(window).height(),
-        windowScrollPosition = $(window).scrollTop(),
-        bottomScrollPosition = windowHeight + windowScrollPosition,
-        documentHeight = $(document).height();
-    
-    // If we've scrolled past the loadNewPostsThreshold, fetch posts
-    if ((documentHeight - loadNewPostsThreshold) < bottomScrollPosition) {
+
+    var windowHeight = window.innerHeight;
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight;
+
+    if ((docHeight - loadNewPostsThreshold) < (windowHeight + scrollTop)) {
       fetchPosts();
     }
   });
-  
-  // Fetch a chunk of posts
+
   function fetchPosts() {
-    // Exit if postURLs haven't been loaded
     if (!postURLs) return;
-    
     isFetchingPosts = true;
-    
-    // Load as many posts as there were present on the page when it loaded
-    // After successfully loading a post, load the next one
-    var loadedPosts = 0,
-        postCount = $(".tag-master:not(.hidden) .post-list").children().length,
-        callback = function() {
-          loadedPosts++;
-          var postIndex = postCount + loadedPosts;
-          
-          if (postIndex > postURLs.length-1) {
-            disableFetching();
-            return;
-          }
-          
-          if (loadedPosts < postsToLoad) {
-            fetchPostWithIndex(postIndex, callback);
-          } else {
-            isFetchingPosts = false;
-          }
-        };
-		
-    fetchPostWithIndex(postCount + loadedPosts, callback);
+
+    var target = document.querySelector('.tag-master:not(.hidden) .post-list');
+    var postCount = target ? target.children.length : 0;
+    var loadedPosts = 0;
+
+    var callback = function() {
+      loadedPosts++;
+      var postIndex = postCount + loadedPosts;
+
+      if (postIndex > postURLs.length - 1) {
+        disableFetching();
+        return;
+      }
+
+      if (loadedPosts < postsToLoad) {
+        fetchPostWithIndex(postIndex, target, callback);
+      } else {
+        isFetchingPosts = false;
+      }
+    };
+
+    fetchPostWithIndex(postCount + loadedPosts, target, callback);
   }
-	
-  function fetchPostWithIndex(index, callback) {
+
+  function fetchPostWithIndex(index, target, callback) {
     var postURL = postURLs[index];
-		
-    $.get(postURL, function(data) {
-      $(data).find(".post").appendTo(".tag-master:not(.hidden) .post-list");
-      callback();
-    });
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', postURL, true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(xhr.responseText, 'text/html');
+        var posts = doc.querySelectorAll('.post');
+        posts.forEach(function(post) {
+          if (target) target.appendChild(post.cloneNode(true));
+        });
+        callback();
+      }
+    };
+    xhr.send();
   }
-  
+
   function disableFetching() {
     shouldFetchPosts = false;
     isFetchingPosts = false;
-    $(".spinner").fadeOut();
+    if (spinner) spinner.style.display = 'none';
   }
-	
-});
+})();

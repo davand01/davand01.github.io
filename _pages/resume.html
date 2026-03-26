@@ -1,0 +1,336 @@
+---
+layout: resume
+title: Experience
+permalink: resume:output_ext
+---
+{% include calculate_relative_base.html %}
+
+<!-- Hero / Summary -->
+<section class="max-w-7xl mx-auto px-8 mb-20">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+    <div class="md:col-span-8">
+      <span class="inline-block px-3 py-1 bg-tertiary-container text-on-tertiary-fixed font-label text-[10px] uppercase tracking-[0.1em] font-bold mb-6 rounded-full">Executive Profile</span>
+      <h1 class="text-[3.5rem] leading-[1.1] font-extrabold tracking-tighter text-on-surface mb-8">
+        {{ site.author }}
+      </h1>
+      <p class="text-xl text-on-surface-variant font-body leading-relaxed max-w-2xl">
+        Information security leader with more than two decades of experience spanning enterprise architecture, compliance, and engineering leadership. Track record of building security programs from the ground up — from ISMS design and ISO 27001 certification to scaling product security teams at high-growth software companies. Equally comfortable shaping strategy at the executive table and diving into technical security reviews.
+      </p>
+    </div>
+    <div class="md:col-span-4 flex items-end justify-end">
+      {% if site.author-pic %}
+      <div class="w-full aspect-square bg-surface-container-low rounded-sm overflow-hidden relative group">
+        <img class="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="{{ relativebase }}assets/img/{{ site.author-pic }}" alt="{{ site.author }}">
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- Technical Competencies -->
+<section class="bg-surface-container-low py-24 mb-24">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="mb-16">
+      <h2 class="text-2xl font-bold tracking-tight text-on-surface-variant uppercase font-label">Technical Competencies</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface-container-lowest p-10 flex flex-col justify-between min-h-[320px] shadow-sm">
+        <div>
+          <span class="material-symbols-outlined text-tertiary mb-6" style="font-size:40px">encrypted</span>
+          <h3 class="text-xl font-bold mb-4">Application Security</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed font-body">Security architecture, secure SDLC, threat modeling, security requirements engineering, and building security champion networks across development organizations.</p>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-8">
+          <span class="px-2 py-1 bg-surface-container text-[10px] font-bold tracking-wider font-label uppercase">Secure SDLC</span>
+          <span class="px-2 py-1 bg-surface-container text-[10px] font-bold tracking-wider font-label uppercase">Threat Modeling</span>
+          <span class="px-2 py-1 bg-surface-container text-[10px] font-bold tracking-wider font-label uppercase">PKI</span>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest p-10 flex flex-col justify-between min-h-[320px] shadow-sm">
+        <div>
+          <span class="material-symbols-outlined text-tertiary mb-6" style="font-size:40px">verified_user</span>
+          <h3 class="text-xl font-bold mb-4">Security &amp; Compliance</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed font-body">ISMS implementation and review, ISO 27001/27002, risk management, incident and continuity management, vendor governance, and security legislation.</p>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-8">
+          <span class="px-2 py-1 bg-surface-container text-[10px] font-bold tracking-wider font-label uppercase">ISO 27001</span>
+          <span class="px-2 py-1 bg-surface-container text-[10px] font-bold tracking-wider font-label uppercase">SOC 2</span>
+          <span class="px-2 py-1 bg-surface-container text-[10px] font-bold tracking-wider font-label uppercase">Risk Mgmt</span>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest p-10 flex flex-col justify-between min-h-[320px] shadow-sm">
+        <div>
+          <span class="material-symbols-outlined text-tertiary mb-6" style="font-size:40px">architecture</span>
+          <h3 class="text-xl font-bold mb-4">Engineering Leadership</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed font-body">Coaching and situational leadership, staff and budget responsibility, building and scaling security teams, and driving strategic improvement programs.</p>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-8">
+          <span class="px-2 py-1 bg-surface-container text-[10px] font-bold tracking-wider font-label uppercase">People Mgmt</span>
+          <span class="px-2 py-1 bg-surface-container text-[10px] font-bold tracking-wider font-label uppercase">DevSecOps</span>
+          <span class="px-2 py-1 bg-surface-container text-[10px] font-bold tracking-wider font-label uppercase">Strategy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Timeline -->
+<section class="max-w-7xl mx-auto px-8 mb-24">
+  <h2 class="text-2xl font-bold tracking-tight text-on-surface-variant uppercase font-label mb-16">Professional Experience</h2>
+
+  <div class="space-y-16">
+
+    <!-- Grafana Labs -->
+    <div class="group grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <span class="font-label text-[10px] font-bold tracking-widest text-outline uppercase">2024 — Present</span>
+        <p class="text-sm text-on-surface-variant mt-1">Remote</p>
+      </div>
+      <div class="md:col-span-9">
+        <div class="flex items-center gap-4 mb-1">
+          <img src="{{ relativebase }}assets/img/logos/grafana_labs_logo.jpeg" alt="Grafana Labs" class="h-8 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" onerror="this.style.display='none'">
+          <h3 class="text-xl font-bold text-on-surface">Director of Security Engineering</h3>
+        </div>
+        <p class="text-tertiary font-semibold text-sm mb-4">Grafana Labs AB</p>
+        <p class="text-on-surface-variant text-sm leading-relaxed font-body mb-4">
+          Leading a team of 10 across two sub-teams: one building security tooling as a plugin within the Grafana open source ecosystem, and one serving as internal security consultants — architecture reviews, vulnerability remediation support, and hands-on AppSec advisory across engineering teams.
+        </p>
+        <ul class="text-on-surface-variant text-sm leading-relaxed font-body space-y-1 list-disc list-inside">
+          <li>Elevated first-party vulnerability management into an end-to-end process — intake, triage, remediation, coordinated disclosure, and embargo handling — in an open source environment</li>
+          <li>Internal advisory function providing architecture reviews and remediation support to product teams</li>
+          <li>Staff and budget ownership, operational and strategic improvements across incident management, secure SDLC, and vendor governance</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-outline-variant/20">
+
+    <!-- Snow Software -->
+    <div class="group grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <span class="font-label text-[10px] font-bold tracking-widest text-outline uppercase">2022 — 2024</span>
+        <p class="text-sm text-on-surface-variant mt-1">Remote</p>
+      </div>
+      <div class="md:col-span-9">
+        <div class="flex items-center gap-4 mb-1">
+          <img src="{{ relativebase }}assets/img/logos/flexera_logo.jpeg" alt="Snow Software/Flexera" class="h-8 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" onerror="this.style.display='none'">
+          <h3 class="text-xl font-bold text-on-surface">Director of Security Engineering</h3>
+        </div>
+        <p class="text-tertiary font-semibold text-sm mb-4">Snow Software/Flexera</p>
+        <p class="text-on-surface-variant text-sm leading-relaxed font-body mb-4">
+          Owned product security, application security, and cloud infrastructure security for the SaaS platform. Started as a single manager with one report, grew the function, and through the Flexera acquisition scaled to leading a team of 15 including a reporting manager.
+        </p>
+        <ul class="text-on-surface-variant text-sm leading-relaxed font-body space-y-1 list-disc list-inside">
+          <li>Drove key parts of successful ISO 27001 certification and SOC 2 Type 2 accreditation</li>
+          <li>Led security engineering through the Flexera acquisition and team integration</li>
+          <li>Daily operational and strategic risk management across development and production</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-outline-variant/20">
+
+    <!-- Plikt- och prövningsverket -->
+    <div class="group grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <span class="font-label text-[10px] font-bold tracking-widest text-outline uppercase">2017 — 2022</span>
+        <p class="text-sm text-on-surface-variant mt-1">Karlstad, Sweden</p>
+      </div>
+      <div class="md:col-span-9">
+        <div class="flex items-center gap-4 mb-1">
+          <img src="{{ relativebase }}assets/img/logos/rekryteringsmyndigheten_logo.jpeg" alt="Swedish Defence Recruitment Agency" class="h-8 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" onerror="this.style.display='none'">
+          <h3 class="text-xl font-bold text-on-surface">Chief Information Security Officer</h3>
+        </div>
+        <p class="text-tertiary font-semibold text-sm mb-4">Swedish Defence Recruitment Agency</p>
+        <p class="text-on-surface-variant text-sm leading-relaxed font-body mb-4">
+          Rebuilt the agency's ISMS largely from scratch, establishing a clear separation between information governed by the Swedish Protective Security Act and standard information — two domains with fundamentally different handling requirements. Worked closely with development teams to embed security requirements into internal systems.
+        </p>
+        <ul class="text-on-surface-variant text-sm leading-relaxed font-body space-y-1 list-disc list-inside">
+          <li>Designed and implemented controls for both ISO 27001/27002 and protective security legislation</li>
+          <li>Served as acting unit manager and member of department leadership team</li>
+          <li>Established security requirements processes for in-house software development</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-outline-variant/20">
+
+    <!-- Versitile Consulting -->
+    <div class="group grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <span class="font-label text-[10px] font-bold tracking-widest text-outline uppercase">2015 — Present</span>
+        <p class="text-sm text-on-surface-variant mt-1">Remote</p>
+      </div>
+      <div class="md:col-span-9">
+        <div class="flex items-center gap-4 mb-1">
+          <img src="{{ relativebase }}assets/img/logos/versitile.png" alt="Versitile Consulting" class="h-8 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" onerror="this.style.display='none'">
+          <h3 class="text-xl font-bold text-on-surface">Senior Consultant, Information Security</h3>
+        </div>
+        <p class="text-tertiary font-semibold text-sm mb-4">Versitile Consulting AB</p>
+        <p class="text-on-surface-variant text-sm leading-relaxed font-body mb-4">
+          Independent consulting practice delivering information security engagements that range from interim leadership to hands-on architecture and compliance work.
+        </p>
+        <ul class="text-on-surface-variant text-sm leading-relaxed font-body space-y-1 list-disc list-inside">
+          <li>Interim CISO for an AI startup — building security governance from the ground up</li>
+          <li>Senior security advisor for a web-based medical records system</li>
+          <li>Security accreditation assessments and compliance follow-up</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-outline-variant/20">
+
+    <!-- Bitsec -->
+    <div class="group grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <span class="font-label text-[10px] font-bold tracking-widest text-outline uppercase">2015 — 2017</span>
+        <p class="text-sm text-on-surface-variant mt-1">Karlstad, Sweden</p>
+      </div>
+      <div class="md:col-span-9">
+        <div class="flex items-center gap-4 mb-1">
+          <img src="{{ relativebase }}assets/img/logos/bitsec.png" alt="Bitsec" class="h-8 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" onerror="this.style.display='none'">
+          <h3 class="text-xl font-bold text-on-surface">Senior Consultant &amp; Business Area Manager</h3>
+        </div>
+        <p class="text-tertiary font-semibold text-sm mb-4">Bitsec AB</p>
+        <p class="text-on-surface-variant text-sm leading-relaxed font-body">
+          Led the IT and information security business area — procurement, consultant assignments, and delivery. Key engagements included security architecture for a mainframe migration at the Swedish Transport Agency, developing Secure Development Lifecycle processes, and creating a cyber security strategy for a multinational corporation.
+        </p>
+      </div>
+    </div>
+
+    <hr class="border-outline-variant/20">
+
+    <!-- ÅF Technology -->
+    <div class="group grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <span class="font-label text-[10px] font-bold tracking-widest text-outline uppercase">2013 — 2015</span>
+        <p class="text-sm text-on-surface-variant mt-1">Karlstad, Sweden</p>
+      </div>
+      <div class="md:col-span-9">
+        <div class="flex items-center gap-4 mb-1">
+          <img src="{{ relativebase }}assets/img/logos/af.png" alt="ÅF Technology" class="h-8 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" onerror="this.style.display='none'">
+          <h3 class="text-xl font-bold text-on-surface">Senior Information Security Consultant</h3>
+        </div>
+        <p class="text-tertiary font-semibold text-sm mb-4">ÅF Technology AB</p>
+        <p class="text-on-surface-variant text-sm leading-relaxed font-body">
+          Technical information security for industrial control systems (ICS) — security requirement profiling, SIEM implementation, and security reviews. Represented Sweden in SIS TK 318, the standardization committee for the ISO 27000 family.
+        </p>
+      </div>
+    </div>
+
+    <hr class="border-outline-variant/20">
+
+    <!-- Avan -->
+    <div class="group grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <span class="font-label text-[10px] font-bold tracking-widest text-outline uppercase">2011 — 2013</span>
+        <p class="text-sm text-on-surface-variant mt-1">Oslo, Norway</p>
+      </div>
+      <div class="md:col-span-9">
+        <div class="flex items-center gap-4 mb-1">
+          <img src="{{ relativebase }}assets/img/logos/avan.png" alt="Avan" class="h-8 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" onerror="this.style.display='none'">
+          <h3 class="text-xl font-bold text-on-surface">Senior Information Security Consultant</h3>
+        </div>
+        <p class="text-tertiary font-semibold text-sm mb-4">Avan AS</p>
+        <p class="text-on-surface-variant text-sm leading-relaxed font-body">
+          Enterprise PKI — design, implementation, and operations for large organizations. Also performed IT security reviews and assessments.
+        </p>
+      </div>
+    </div>
+
+    <hr class="border-outline-variant/20">
+
+    <!-- Veriscan Security -->
+    <div class="group grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <span class="font-label text-[10px] font-bold tracking-widest text-outline uppercase">2007 — 2011</span>
+        <p class="text-sm text-on-surface-variant mt-1">Karlstad, Sweden</p>
+      </div>
+      <div class="md:col-span-9">
+        <div class="flex items-center gap-4 mb-1">
+          <img src="{{ relativebase }}assets/img/logos/veriscan.png" alt="Veriscan Security" class="h-8 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" onerror="this.style.display='none'">
+          <h3 class="text-xl font-bold text-on-surface">Information Security Consultant</h3>
+        </div>
+        <p class="text-tertiary font-semibold text-sm mb-4">Veriscan Security AB</p>
+        <p class="text-on-surface-variant text-sm leading-relaxed font-body">
+          Technical security specialist across a broad client base — enterprises, municipalities, and government agencies. Led ISO 27001/27002 compliance assessments and served as security advisor for high-security ICS environments.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Certifications -->
+<section class="bg-surface py-24 border-t border-outline-variant/10">
+  <div class="max-w-7xl mx-auto px-8">
+    <h2 class="text-2xl font-bold tracking-tight text-on-surface-variant uppercase font-label mb-12">Certifications</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-surface-container-low p-8 flex flex-col items-center text-center min-h-[220px] justify-between">
+        <div>
+          <div class="w-14 h-14 flex items-center justify-center bg-tertiary text-on-tertiary rounded-sm font-bold text-sm mx-auto mb-4">CISSP</div>
+          <h3 class="font-bold text-on-surface text-sm leading-tight mb-1">Certified Information Systems Security Professional</h3>
+          <p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">ISC²</p>
+        </div>
+        <p class="text-xs text-tertiary font-label font-bold tracking-widest mt-4">Since 2011</p>
+      </div>
+      <div class="bg-surface-container-low p-8 flex flex-col items-center text-center min-h-[220px] justify-between">
+        <div>
+          <div class="w-14 h-14 flex items-center justify-center bg-tertiary text-on-tertiary rounded-sm font-bold text-sm mx-auto mb-4">CISM</div>
+          <h3 class="font-bold text-on-surface text-sm leading-tight mb-1">Certified Information Security Manager</h3>
+          <p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">ISACA</p>
+        </div>
+        <p class="text-xs text-outline font-label font-bold tracking-widest mt-4">2018 — 2026</p>
+      </div>
+      <div class="bg-surface-container-low p-8 flex flex-col items-center text-center min-h-[220px] justify-between">
+        <div>
+          <div class="w-14 h-14 flex items-center justify-center bg-tertiary text-on-tertiary rounded-sm font-bold text-sm mx-auto mb-4">SCF</div>
+          <h3 class="font-bold text-on-surface text-sm leading-tight mb-1">SABSA Chartered Security Architect — Foundation</h3>
+          <p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">SABSA Institute</p>
+        </div>
+        <p class="text-xs text-tertiary font-label font-bold tracking-widest mt-4">Since 2021</p>
+      </div>
+      <div class="bg-surface-container-low p-8 flex flex-col items-center text-center min-h-[220px] justify-between">
+        <div>
+          <div class="w-14 h-14 flex items-center justify-center bg-tertiary text-on-tertiary rounded-sm font-bold text-xs mx-auto mb-4">27001 LI</div>
+          <h3 class="font-bold text-on-surface text-sm leading-tight mb-1">ISO 27001 Lead Implementer</h3>
+          <p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">IT Governance</p>
+        </div>
+        <p class="text-xs text-tertiary font-label font-bold tracking-widest mt-4">Since 2021</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education & Courses -->
+<section class="bg-surface-container-low py-24">
+  <div class="max-w-7xl mx-auto px-8">
+    <h2 class="text-2xl font-bold tracking-tight text-on-surface-variant uppercase font-label mb-12">Education &amp; Courses</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface-container-lowest p-8 flex flex-col min-h-[180px] justify-between shadow-sm">
+        <div>
+          <span class="material-symbols-outlined text-tertiary mb-4" style="font-size:28px">school</span>
+          <h3 class="text-lg font-bold mb-1">B. Sc. Computer Science</h3>
+          <p class="text-tertiary font-semibold text-sm">Karlstad University</p>
+        </div>
+        <p class="text-xs text-on-surface-variant font-label uppercase tracking-widest mt-4">Graduated 2012</p>
+      </div>
+      <div class="bg-surface-container-lowest p-8 flex flex-col min-h-[180px] justify-between shadow-sm">
+        <div>
+          <span class="material-symbols-outlined text-tertiary mb-4" style="font-size:28px">school</span>
+          <h3 class="text-lg font-bold mb-1">Information Security (30 ECTS)</h3>
+          <p class="text-tertiary font-semibold text-sm">Luleå University of Technology</p>
+        </div>
+        <p class="text-xs text-on-surface-variant font-label uppercase tracking-widest mt-4">2017</p>
+      </div>
+      <div class="bg-surface-container-lowest p-8 flex flex-col min-h-[180px] justify-between shadow-sm">
+        <div>
+          <span class="material-symbols-outlined text-tertiary mb-4" style="font-size:28px">group</span>
+          <h3 class="text-lg font-bold mb-1">Understanding Group &amp; Leaders (UGL)</h3>
+          <p class="text-tertiary font-semibold text-sm">Leadership Course</p>
+        </div>
+        <p class="text-xs text-on-surface-variant font-label uppercase tracking-widest mt-4">2020</p>
+      </div>
+    </div>
+  </div>
+</section>
