@@ -6,7 +6,6 @@ title: "The SDLC has an agent now. Your AppSec program wasn't designed for that.
 date: 2026-04-08 12:00:00 +0100
 description: Agentic development doesn't just change how fast software is written — it changes who makes security decisions, and at what scale. Here's what that actually means for AppSec.
 img: posts/20260408/agentic-sdlc-cover.png
-linkedin_image_prompt: "Pixar-style 3D illustration, warm cinematic lighting. The subject is based on the pasted picture of me: a slim man in his mid-thirties, short brown hair swept to the side, round black-framed glasses, light stubble, friendly and slightly bemused expression. He is standing in a modern open-plan office, holding a coffee cup, dressed in a casual-smart outfit — beige zip-neck sweater over a collared shirt. He is positioned at a subtle checkpoint — a glowing archway or turnstile, rendered simply and cleanly, not sci-fi heavy. Around and past him, small luminous AI agent figures — abstract, friendly, slightly geometric, like tiny glowing constructs — are streaming through in a blur of motion, carrying fragments of code, pull request icons, and small padlock symbols. His expression is composed but thoughtful, one eyebrow slightly raised, coffee cup mid-lift — the look of someone who has noticed something important and is deciding what to say about it. Aspect ratio 1:1, suitable for a LinkedIn post thumbnail. No text overlays."
 tags: [appsec, product security, sdlc, ai, agentic]
 author: David Andersson
 mathjax: no
