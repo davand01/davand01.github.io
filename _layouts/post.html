@@ -33,7 +33,7 @@ layout: default
         {% endif %}
       </div>
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-6 leading-[1.1]">{{ page.title }}</h1>
-      {% if page.description %}
+      {% if page.description and page.hide_description != true %}
       <p class="text-lg text-secondary leading-relaxed max-w-2xl">{{ page.description }}</p>
       {% endif %}
       <div class="flex items-center gap-4 mt-8">
@@ -70,7 +70,7 @@ layout: default
 
       <!-- Tags -->
       {% if page.tags.size > 0 %}
-      <div class="flex flex-wrap gap-2 mt-12 pt-8 border-t border-outline-variant/20">
+      <div class="flex flex-wrap gap-2 mt-12 pt-8 border-t border-outline-variant/20 no-print">
         {% for tag in page.tags %}
         <a href="{{ relativebase }}tag.html?tag={{ tag | url_encode }}" class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase tracking-wider rounded-sm hover:bg-tertiary-container hover:text-on-tertiary-fixed transition-colors no-underline">{{ tag }}</a>
         {% endfor %}
@@ -78,13 +78,14 @@ layout: default
       {% endif %}
 
       <!-- Share -->
-      <div class="flex items-center gap-6 mt-8 pt-8 border-t border-outline-variant/20">
+      <div class="flex items-center gap-6 mt-8 pt-8 border-t border-outline-variant/20 no-print">
         <span class="text-xs font-label tracking-widest uppercase text-outline font-bold">Share</span>
         <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank" rel="nofollow noopener" class="text-outline hover:text-tertiary transition-colors no-underline"><span class="material-symbols-outlined" style="font-size:20px">share</span></a>
         <a href="mailto:?subject={{ page.title }}&body={{ page.description | default: '' }}%0A%0A{{ site.url }}{{ page.url }}" rel="nofollow" class="text-outline hover:text-tertiary transition-colors no-underline"><span class="material-symbols-outlined" style="font-size:20px">mail</span></a>
+        <button onclick="window.print()" title="Print post" class="text-outline hover:text-tertiary transition-colors cursor-pointer ml-auto"><span class="material-symbols-outlined" style="font-size:20px">print</span></button>
       </div>
 
-      <div class="my-16">
+      <div class="my-16 no-print">
         {% include author-box.html %}
       </div>
 
