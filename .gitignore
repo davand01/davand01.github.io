@@ -13,4 +13,6 @@
 .liquidrc
 _site/
 .jekyll-cache/
-/.claude/
+/.claude/*
+/.agent-style/*
+CLAUDE.md
