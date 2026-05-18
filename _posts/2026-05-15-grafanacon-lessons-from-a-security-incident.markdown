@@ -4,6 +4,7 @@ read_time: true
 show_date: true
 title: "Lessons from a Security Incident (GrafanaCON 2026)"
 date: 2026-05-15 09:00:00 +0100
+talk_date: 2026-04-21
 description: A walkthrough of the April 2025 CI/CD incident at Grafana Labs - one small misconfiguration, fast detection thanks to canary tokens, and why preparation beats reaction.
 img: posts/20260515/grafanacon-2026-cover.jpg
 img_in_post: false
@@ -45,4 +46,4 @@ A recording of the talk is published on the [GrafanaCON agenda page](https://gra
 
 ---
 
-_Presented at GrafanaCON 2026, Barcelona, Spain - {{ page.date | date: "%B %-d, %Y" }}_
+_Presented at GrafanaCON 2026, Barcelona, Spain - {{ page.talk_date | date: "%B %-d, %Y" }}_

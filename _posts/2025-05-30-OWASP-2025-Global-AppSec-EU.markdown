@@ -4,6 +4,7 @@ read_time: true
 show_date: true
 title: "Metrics That Matter: Driving AppSec Success with Data-Driven Insights (OWASP Global AppSec)"
 date: 2025-05-30 14:15:00 +0100
+talk_date: 2025-05-30
 description: How to collect, visualize, and communicate actionable AppSec metrics that bridge the gap between security engineering and leadership priorities.
 img: posts/20250530/logo_owasp_barcelona.jpg
 img_in_post: false
@@ -35,4 +36,4 @@ The slides are available on [sched.com](https://static.sched.com/hosted_files/ow
 
 ---
 
-_Presented at OWASP 2025 Global AppSec EU, Barcelona, Spain — {{ page.date | date: "%B %-d, %Y" }}_
+_Presented at OWASP 2025 Global AppSec EU, Barcelona, Spain - {{ page.talk_date | date: "%B %-d, %Y" }}_

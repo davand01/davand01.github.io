@@ -2,8 +2,9 @@
 layout: post
 read_time: true
 show_date: true
-title: "Talk Title — Conference Name YYYY"
+title: "Talk Title - Conference Name YYYY"
 date: YYYY-MM-DD 12:00:00 +0100
+talk_date: YYYY-MM-DD
 description: A one-sentence summary of what the talk covered.
 img: posts/YYYYMMDD/talk-cover.jpg
 tags: [speaking, topic-tag-1, topic-tag-2]
@@ -41,4 +42,4 @@ A recording of the talk is available on [YouTube](https://youtube.example.com/yo
 
 ---
 
-_Presented at Conference Name, City, Country — {{ page.date | date: "%B %-d, %Y" }}_
+_Presented at Conference Name, City, Country - {{ page.talk_date | date: "%B %-d, %Y" }}_
