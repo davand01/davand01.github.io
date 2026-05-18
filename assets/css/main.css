@@ -85,14 +85,22 @@ h1, h2, h3, .font-headline {
 }
 
 .prose pre {
-  background: #f0f4f7;
-  border: 1px solid #d9e4ea;
+  background: #272822;
+  border: 1px solid #1f2024;
   border-radius: 0.25rem;
   padding: 1.25rem 1.5rem;
   overflow-x: auto;
   margin: 1.5rem 0;
   font-size: 0.875rem;
   line-height: 1.6;
+  color: #f8f8f2;
+}
+
+.prose pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: inherit;
 }
 
 .prose code {
