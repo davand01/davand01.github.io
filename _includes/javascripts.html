@@ -3,17 +3,6 @@
 
 <script src="{{ relativebase }}assets/js/jekyll-search.js"></script>
 
-{% if page.mathjax %}
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    tex2jax: { inlineMath: [['$','$'],["\\(","\\)"]], displayMath: [['$$','$$'],["\\[","\\]"]], processEscapes: true },
-    "CommonHTML": { linebreaks: { automatic: true } }
-  });
-</script>
-<script src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-{% endif %}
-
 <script>
   (function() {
     var searchInput = document.getElementById('search-input');

@@ -1,10 +1,10 @@
 # Site settings
 title: David Andersson
-description: 'David Andersson — Security engineering leader, CISSP, with nearly 20 years building and scaling security programs for software companies, government agencies, and global enterprises.'
+description: 'David Andersson - Security engineering leader, CISSP, with more than two decades building and scaling security programs for software companies, government agencies, and global enterprises.'
 permalink: ':title:output_ext'
 baseurl: ""
 url: "https://www.davidandersson.se"
-logo-icon-SEO: "/assets/img/branding/logo.svg"
+logo-icon-SEO: "/assets/img/favicon/favicon.png"
 
 # Author settings
 author: David Andersson
@@ -14,6 +14,11 @@ author-pic: david.png
 email: info@davidandersson.se
 linkedin: davidandersson-se
 github: davand01
+
+# Analytics (GoatCounter - privacy-friendly, no cookies, no PII)
+# Set to your goatcounter.com subdomain code (e.g., "davidandersson") to enable.
+# Leave empty to disable the analytics script.
+goatcounter: "davidandersson"
 
 # PGP / GPG
 pgp:

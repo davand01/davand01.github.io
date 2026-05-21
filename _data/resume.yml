@@ -1,0 +1,436 @@
+# Single source of truth for the Experience page and the generated /cv.md
+# Edit content here. The HTML page (_pages/resume.html) and the markdown CV
+# (_pages/cv.md) both render from this file.
+
+basics:
+  name: David Andersson
+  title: Director of Security Engineering
+  label: Security Engineering Leader, CISSP, CISM
+  location: Sweden (remote)
+  email: info@davidandersson.se
+  website: https://www.davidandersson.se
+  linkedin: https://www.linkedin.com/in/davidandersson-se
+  github: https://github.com/davand01
+  summary: >-
+    Information security leader with more than two decades of experience
+    spanning enterprise architecture, compliance, and engineering leadership.
+    Track record of building security programs from the ground up: from ISMS
+    design and ISO 27001 certification to scaling product security teams at
+    high-growth software companies. Equally comfortable shaping strategy at
+    the executive table and diving into technical security reviews.
+  approach: >-
+    Security as a service function, not a gatekeeper. The shift from "no, you
+    can't do that" to "yes, let's find a better way to do that" is the work.
+    Best results come from addressing security early in the design phase and
+    treating engineering teams as partners, not subjects of compliance.
+
+# Three-card grid on the Experience page. Each card lists a competency area.
+competencies:
+  - title: Application Security
+    icon: encrypted
+    description: >-
+      Security architecture, secure SDLC, threat modeling, security
+      requirements engineering, and building security champion networks
+      across development organizations.
+    tags:
+      - Secure SDLC
+      - Threat Modeling
+      - CI/CD
+
+  - title: Security & Compliance
+    icon: verified_user
+    description: >-
+      ISMS implementation and review, ISO 27001/27002, risk management,
+      incident and continuity management, vendor governance, and security
+      legislation.
+    tags:
+      - ISO 27001
+      - GRC
+      - Compliance as code
+
+  - title: Engineering Leadership
+    icon: architecture
+    description: >-
+      Coaching and situational leadership, staff and budget responsibility,
+      building and scaling security teams, and driving strategic improvement
+      programs.
+    tags:
+      - People Mgmt
+      - Cultural awareness
+      - Strategy
+
+# Experience timeline, newest first. Each entry renders as a card.
+experience:
+  - company: Grafana Labs AB
+    title: Director of Security Engineering
+    logo: grafana_labs_logo.jpeg
+    start: "2024"
+    end: Present
+    location: Remote
+    sector: SaaS observability, open source
+    scope: Team of 10 across two sub-teams. Staff and budget responsibility.
+    summary: >-
+      Leading a team of 10 across two sub-teams: one building VulnO11y, an
+      internal observability tool for vulnerability management across the
+      Grafana ecosystem, and one serving as internal security consultants
+      providing architecture reviews, vulnerability remediation support, and
+      hands-on AppSec advisory across engineering teams.
+    highlights:
+      - >-
+        Built and operate VulnO11y, an observability tool that models the
+        full vulnerability lifecycle as a state machine, from detection
+        through CVE publication, embargo handling, and SLO-driven
+        remediation. Ingests from Trivy, Grype, and OSV across first-party
+        and third-party scope, and tracks the point a vulnerability entered
+        a repository, image, or artefact against the agreed time-to-fix.
+      - >-
+        Co-presented at GrafanaCON 2026 on the April 2025 CI/CD incident
+        response. Full attack reconstruction, canary-token detection, and
+        open-source forensics (Loki, Trufflehog, Zizmor, Gato-X) that
+        confirmed no customer or user data was affected.
+      - >-
+        Evolving threat modeling practice. STRIDE remains the default,
+        with the team building a custom model inspired by STRIDE and PASTA
+        to cover AI-introduced threat surfaces where classic frameworks
+        fall short.
+      - >-
+        Own the AppSec testing toolchain across the organisation: SAST,
+        SCA, external penetration testing, and the bug bounty and VDP
+        programme.
+      - Internal advisory function providing architecture reviews and remediation support to product teams.
+      - Staff and budget ownership, operational and strategic improvements across incident management, secure SDLC, and vendor governance.
+    keywords:
+      - Vulnerability Management
+      - VulnO11y
+      - Vulnerability Lifecycle
+      - CVE Coordination
+      - Embargo Handling
+      - Coordinated Disclosure
+      - Open Source Security
+      - Trivy
+      - Grype
+      - OSV
+      - SAST
+      - SCA
+      - Penetration Testing
+      - Bug Bounty
+      - VDP
+      - STRIDE
+      - PASTA
+      - Threat Modeling
+      - Incident Response
+      - CI/CD Security
+      - Detection Engineering
+      - AppSec
+      - Architecture Review
+      - Secure SDLC
+      - Vendor Governance
+      - Public Speaker
+
+  - company: Snow Software / Flexera
+    title: Director of Security Engineering
+    logo: flexera_logo.jpeg
+    start: "2022"
+    end: "2024"
+    location: Remote
+    sector: SaaS, software asset management
+    scope: Grew from manager of 1 to leader of 15, including a reporting manager, through the Flexera acquisition.
+    summary: >-
+      Owned product security, application security, and cloud infrastructure
+      security for the SaaS platform. The platform was an Azure-native,
+      multi-tenant lift-and-shift of Snow Software's historic on-prem
+      product. Started as a single manager with one report, grew the
+      function, and through the Flexera acquisition scaled to leading a
+      team of 15 including a reporting manager.
+    highlights:
+      - >-
+        Owned the full AppSec and cloud security toolchain on Azure: SAST,
+        DAST, SCA, and CSPM, plus external penetration testing and the bug
+        bounty programme.
+      - >-
+        Platform security owner for ISO 27001 certification and SOC 2 Type 2
+        accreditation (Security Trust Service Criterion). Sat in audit
+        interviews, collected evidence, and improved policies and SDLC
+        controls across the platform. The wider GRC and CISO function
+        orchestrated the certification programme overall.
+      - Led security engineering through the Flexera acquisition and team integration.
+      - Daily operational and strategic risk management across development and production.
+      - Held monthly CTO updates on security posture and progress.
+    keywords:
+      - Azure
+      - Multi-tenant SaaS
+      - Lift-and-Shift
+      - Product Security
+      - Cloud Security
+      - SAST
+      - DAST
+      - SCA
+      - CSPM
+      - Penetration Testing
+      - Bug Bounty
+      - ISO 27001
+      - SOC 2 Type 2
+      - SOC 2 Security TSC
+      - Audit Evidence
+      - M&A Integration
+      - DevSecOps
+      - Application Security
+
+  - company: Swedish Defence Conscription and Assessment Agency
+    title: Chief Information Security Officer
+    logo: rekryteringsmyndigheten_logo.jpeg
+    start: "2017"
+    end: "2022"
+    location: Karlstad, Sweden
+    sector: Swedish government agency, defence and protective security
+    scope: Functional CISO, working closely with the Säkerhetsskyddsorganisation and the IT team (CIO and IT enterprise architect).
+    summary: >-
+      Acted as the functional CISO at the agency. Rebuilt the ISMS largely
+      from scratch, establishing a clear separation between information
+      governed by the Swedish Protective Security Act and standard
+      information, two domains with fundamentally different handling
+      requirements. Worked closely with the protective security organisation
+      and the IT team, including the CIO and the IT enterprise architect,
+      and with development teams to embed security requirements into
+      internal systems. Much of the work supported systems to be
+      accredited according to KSF (Requirements on Security Functions)
+      and uphold communications security.
+    highlights:
+      - Designed and implemented controls for both ISO 27001/27002 and protective security legislation.
+      - Served as acting unit manager and member of department leadership team.
+      - >-
+        Established security requirements processes for in-house software
+        development. Based the ISMS on ISO 27001 and 27002, and authored a
+        requirements catalogue aligned with the information
+        classification levels of systems.
+    keywords:
+      - CISO
+      - Functional CISO
+      - ISMS
+      - ISO 27001
+      - ISO 27002
+      - Protective Security
+      - Protective Security Act
+      - KSF
+      - Requirements on Security Functions
+      - Communications Security
+      - Information Classification
+      - Security Requirements Engineering
+      - Requirements Catalogue
+      - Government Security
+      - Defence Sector
+
+  - company: Versitile Consulting AB
+    title: Senior Consultant, Information Security
+    logo: versitile.png
+    start: "2015"
+    end: Present
+    location: Remote
+    sector: Independent consulting practice
+    scope: Independent practice running alongside primary engagements. Startup CISO and security advisor work through to hands-on architecture, compliance, and assessment.
+    summary: >-
+      Independent consulting practice delivering information security
+      engagements that range from startup CISO and security advisor work to
+      hands-on architecture, compliance, and security assessment.
+    highlights:
+      - >-
+        Startup CISO for an AI startup. Took the company through alignment
+        with SOC 2 and ISO 27001, maturing boilerplate ISMS content into
+        tailored, company-specific policies. Built a GRC pipeline on Vanta
+        and GitOps: policies authored as markdown in Git, rendered to PDF,
+        and uploaded to Vanta through a GitHub Actions workflow. Delivered
+        in-house OWASP Top 10 training and acted as IT security architect
+        in feature development.
+      - >-
+        Security advisor in the energy sector (ongoing engagement).
+        Procurement support, policy writing and ISMS work, SIEM tuning,
+        and applying GDPR and NIS2 to the operating context.
+      - >-
+        Security assessment of a mid-sized SaaS product, including review
+        of source control and the CI/CD environment.
+      - >-
+        Senior security advisor for a web-based animal medical
+        records system used by veterinarians to report deviations and
+        violations (for example, sheep diseases) and compile statistics.
+        Supported both data quality and security.
+      - >-
+        Online doctor service. Helped form their first ISMS and aligned
+        operational procedures with legislation across multiple
+        jurisdictions: Sweden, Germany, UK, and USA.
+    keywords:
+      - Startup CISO
+      - Interim CISO
+      - ISMS
+      - ISO 27001
+      - SOC 2
+      - GDPR
+      - NIS2
+      - Vanta
+      - GitOps
+      - GitHub Actions
+      - Policy as Code
+      - OWASP Top 10
+      - Security Architecture
+      - SIEM Tuning
+      - CI/CD Review
+      - Source Control Review
+      - Procurement Security
+      - Energy Sector
+      - Healthcare Security
+      - Multi-jurisdiction Compliance
+
+  - company: Bitsec AB
+    title: Senior Consultant & Business Area Manager
+    logo: bitsec.png
+    start: "2015"
+    end: "2017"
+    location: Karlstad, Sweden
+    sector: Cyber security consultancy
+    scope: P&L responsibility for the IT and information security business area. Procurement, staffing, and delivery.
+    summary: >-
+      Led the IT and information security business area covering procurement,
+      consultant assignments, and delivery. Key engagements included security
+      architecture for a mainframe migration at the Swedish Transport Agency,
+      developing Secure Development Lifecycle processes, and creating a cyber
+      security strategy for a multinational corporation.
+    highlights: []
+    keywords:
+      - Business Area Management
+      - Security Architecture
+      - Secure SDLC
+      - Cyber Security Strategy
+      - Public Sector
+
+  - company: ÅF Technology AB
+    title: Senior Information Security Consultant
+    logo: af.png
+    start: "2013"
+    end: "2015"
+    location: Karlstad, Sweden
+    sector: Engineering and technology consultancy
+    scope: Technical security consultant, primarily industrial control systems clients.
+    summary: >-
+      Technical information security for industrial control systems (ICS)
+      covering security requirement profiling, SIEM implementation, and
+      security reviews. Represented Sweden in SIS TK 318, the standardization
+      committee for the ISO 27000 family.
+    highlights: []
+    keywords:
+      - ICS Security
+      - OT Security
+      - SIEM
+      - ISO 27000 Standardization
+      - SIS TK 318
+
+  - company: Avan AS
+    title: Senior Information Security Consultant
+    logo: avan.png
+    start: "2011"
+    end: "2013"
+    location: Oslo, Norway
+    sector: Cyber security consultancy
+    scope: Enterprise PKI specialist for large organizations.
+    summary: >-
+      Enterprise PKI covering design, implementation, and operations for
+      large organizations. Also performed IT security reviews and
+      assessments.
+    highlights: []
+    keywords:
+      - Enterprise PKI
+      - Cryptography
+      - Identity Management
+      - Security Assessment
+
+  - company: Veriscan Security AB
+    title: Information Security Consultant
+    logo: veriscan.png
+    start: "2007"
+    end: "2011"
+    location: Karlstad, Sweden
+    sector: Information security consultancy
+    scope: Technical security specialist across enterprises, municipalities, and government agencies.
+    summary: >-
+      Technical security specialist across a broad client base including
+      enterprises, municipalities, and government agencies. Led ISO
+      27001/27002 compliance assessments and served as security advisor for
+      high-security ICS environments.
+    highlights: []
+    keywords:
+      - ISO 27001 Assessment
+      - ICS Security
+      - Public Sector
+      - Compliance
+
+# Early-career roles. Rendered only in the ATS-parseable /cv.md output,
+# intentionally omitted from the styled Experience page to keep the
+# timeline focused on senior engagements.
+early_career:
+  - title: Junior IT Security Consultant
+    company: WM-data AB/LogicaCMG
+    start: "2005"
+    end: "2007"
+    location: Karlstad, Sweden
+    summary: >-
+      Technical security delivery focused on penetration testing, network
+      design, and operating system hardening for client engagements.
+    keywords:
+      - Penetration Testing
+      - Network Design
+      - OS Hardening
+      - Infrastructure Security
+
+  - title: Intern, Penetration Testing
+    company: Validation AB
+    start: "2004"
+    end: "2005"
+    location: Karlstad, Sweden
+    summary: >-
+      Supporting penetration tests as part of the penetration testing unit.
+    keywords:
+      - Penetration Testing
+      - Security Testing
+
+certifications:
+  - short: CISSP
+    name: Certified Information Systems Security Professional
+    issuer: ISC²
+    since: "2011"
+    expires: null
+    status: active
+
+  - short: CISM
+    name: Certified Information Security Manager
+    issuer: ISACA
+    since: "2018"
+    expires: "2026"
+    status: expiring
+
+  - short: SCF
+    name: SABSA Chartered Security Architect, Foundation
+    issuer: SABSA Institute
+    since: "2021"
+    expires: null
+    status: active
+
+  - short: 27001 LI
+    name: ISO 27001 Lead Implementer
+    issuer: IT Governance
+    since: "2021"
+    expires: null
+    status: active
+
+education:
+  - degree: B. Sc. Computer Science
+    institution: Karlstad University
+    year: "2012"
+    icon: school
+
+  - degree: Information Security (30 ECTS)
+    institution: Luleå University of Technology
+    year: "2017"
+    icon: school
+
+  - degree: Understanding Group & Leaders (UGL)
+    institution: Leadership Course
+    year: "2020"
+    icon: group

@@ -18,17 +18,17 @@ I had the opportunity to speak at **[OWASP Global AppSec 2025](https://owasp2025
 
 ## Abstract
 
-"What gets measured, gets managed" may be an over-simplification, but the quote has its merits. Building an effective application security program requires more than good tooling and policy — it requires proof that what you're doing is working, and a clear way to communicate that to leadership.
+"What gets measured, gets managed" may be an over-simplification, but the quote has its merits. Building an effective application security program requires more than good tooling and policy. It requires proof that what you're doing is working, and a clear way to communicate that to leadership.
 
 This session explores the full lifecycle of AppSec metrics: how to categorize qualitative and quantitative measures to align with frameworks that define metrics as a required control, how to choose the right metrics and visualize them to draw conclusions about program effectiveness, and how to use that data to drive improvement and support requests to leadership with evidence rather than intuition.
 
-In many areas of life — application security included — what gets measured can be proven, and what gets proven can be improved.
+In many areas of life, application security included, what gets measured can be proven, and what gets proven can be improved.
 
 ## Key takeaways
 
-- **Measure with purpose** — distinguish between qualitative and quantitative metrics and align them with framework requirements
-- **Normalize intelligently** — visualize metrics in ways that surface real trends and support actionable conclusions
-- **Make metrics actionable** — use data to bridge the gap between security engineering and leadership's strategic priorities
+- **Measure with purpose**: distinguish between qualitative and quantitative metrics and align them with framework requirements
+- **Normalize intelligently**: visualize metrics in ways that surface real trends and support actionable conclusions
+- **Make metrics actionable**: use data to bridge the gap between security engineering and leadership's strategic priorities
 
 ## Slides
 

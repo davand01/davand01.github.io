@@ -4,11 +4,10 @@ read_time: true
 show_date: true
 title: "The SDLC has an agent now. Your AppSec program wasn't designed for that."
 date: 2026-04-08 12:00:00 +0100
-description: Agentic development doesn't just change how fast software is written — it changes who makes security decisions, and at what scale. Here's what that actually means for AppSec.
+description: Agentic development doesn't just change how fast software is written. It changes who makes security decisions, and at what scale. Here's what that actually means for AppSec.
 img: posts/20260408/agentic-sdlc-cover.png
 tags: [appsec, product security, sdlc, ai, agentic]
 author: David Andersson
-mathjax: no
 ---
 
 Imagine it's a Monday morning. Your developers are barely past the login screen, and an AI agent has already drafted a feature, written the tests, opened a pull request, and flagged a dependency that needs updating. By the time standup is over, the PR is mergeable. By the time the first coffee is brewed, it's in main.

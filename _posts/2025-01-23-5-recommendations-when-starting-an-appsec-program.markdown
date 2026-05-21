@@ -8,8 +8,7 @@ description: If you want to build an appsec program, here are five valuable reco
 img: posts/20250123/appsec-bg.jpg
 tags: [product security, cyber security, OWASP SAMM, sdlc, security champion ,owasp, metrics]
 author: David Andersson
-github:  
-mathjax: yes
+github:
 ---
 You've made the decision to create a product security program, congratulations! Here are five recommendations to help you on your journey:
 

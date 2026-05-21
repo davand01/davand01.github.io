@@ -8,7 +8,6 @@ description: The NVD cutbacks are not a funding crisis. They are a design crisis
 img: posts/20260421/nvd-retrenchment-cover.png
 tags: [appsec, vulnerability management, nvd, euvd, cve, policy]
 author: David Andersson
-mathjax: no
 ---
 
 "It's always DNS" is a saying that most people who have been part of solving outages are familiar with. And sure, DNS should not work, given its complexity.
