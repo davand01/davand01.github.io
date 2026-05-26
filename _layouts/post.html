@@ -21,7 +21,7 @@ layout: default
 <main class="pt-32 pb-24">
   <article class="max-w-7xl mx-auto px-8" itemscope itemtype="https://schema.org/CreativeWork">
     <!-- Article Header -->
-    <section class="mb-12 md:max-w-3xl">
+    <section class="mb-12 max-w-3xl mx-auto">
       <div class="flex items-center gap-4 mb-6">
         {% if page.tags.size > 0 %}
         <span class="bg-tertiary-container text-on-tertiary-fixed text-[10px] font-bold px-3 py-1 uppercase tracking-wider rounded-full">{{ page.tags | first }}</span>
@@ -52,7 +52,7 @@ layout: default
     <!-- Cover Image -->
     {% unless page.img_in_post == false %}
     {% if page.img %}
-    <section class="mb-12">
+    <section class="mb-12 max-w-3xl mx-auto">
       <div class="aspect-[21/9] max-h-[480px] overflow-hidden rounded-sm bg-surface-container-high">
         <img src="{{ relativebase }}assets/img/{{ page.img }}" alt="{{ page.title }}" class="w-full h-full object-cover">
       </div>

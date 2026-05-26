@@ -5,7 +5,8 @@ show_date: true
 title: "The NVD is retrenching. The model it was built on was already obsolete."
 date: 2026-04-21 00:00:00 +0100
 description: The NVD cutbacks are not a funding crisis. They are a design crisis. Monolithic vulnerability intelligence never matched the shape of the actual problem, and defenders who keep treating it as authoritative are paying a tax they do not need to pay.
-img: posts/20260421/nvd-retrenchment-cover.png
+img: posts/20260421/nvd-retrenchment-cover.jpg
+img_in_post: false
 tags: [appsec, vulnerability management, nvd, euvd, cve, policy]
 author: David Andersson
 ---

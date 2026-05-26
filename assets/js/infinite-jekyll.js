@@ -20,8 +20,11 @@
 
   if (urlParams.has('tag')) {
     var tag = urlParams.get('tag');
-    var tagEl = document.getElementById(tag);
-    if (tagEl) tagEl.classList.remove('hidden');
+    // Hide every tag section except the matching one. The template renders
+    // them all visible by default so the page is not blank when JS fails to run.
+    document.querySelectorAll('.tag-master').forEach(function(el) {
+      if (el.id !== tag) el.classList.add('hidden');
+    });
 
     getJSON('./posts-by-tag.json', function(data) {
       var tagItem = data.find(function(el) { return el.tag === tag; });

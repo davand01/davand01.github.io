@@ -31,7 +31,7 @@ infinite: yes
       </div>
       <div class="flex flex-wrap gap-2">
         {% assign sorted_tags = site.tags | sort %}
-        {% for tag in sorted_tags limit:5 %}
+        {% for tag in sorted_tags %}
         <a href="{{ relativebase }}tag.html?tag={{ tag[0] | url_encode }}" class="px-4 py-2 bg-surface-container-highest text-secondary text-xs font-semibold uppercase tracking-wider rounded-sm hover:bg-surface-dim transition-all no-underline">{{ tag[0] }}</a>
         {% endfor %}
       </div>

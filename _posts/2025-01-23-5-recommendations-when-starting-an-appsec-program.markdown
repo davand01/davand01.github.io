@@ -7,6 +7,7 @@ date: 2025-01-29 14:39:37 +0100
 description: If you want to build an appsec program, here are five valuable recommendations to take into consideration.
 img: posts/20250123/appsec-bg.jpg
 tags: [product security, cyber security, OWASP SAMM, sdlc, security champion ,owasp, metrics]
+img_in_post: false
 author: David Andersson
 github:
 ---
