@@ -57,7 +57,7 @@ So the measure of a security leader is not how many good decisions they made. It
 
 ## Closing
 
-All of which is easy to write and hard to do, for one reason this piece has so far set aside. These systems are being introduced into organisations that do not already think this way, that did not ask for them, and that have their own work to do. A system designed in isolation is a slide. A system adopted by an organisation that was not waiting for it is the actual challenge. Which is the last question, and the hardest: how do you start? That is the subject of [the next piece]({% post_url 2026-07-12-building-security-from-0-to-1 %}).
+All of which is easy to write and hard to do, for one reason this piece has so far set aside. These systems are being introduced into organisations that do not already think this way, that did not ask for them, and that have their own work to do. A system designed in isolation is a slide. A system adopted by an organisation that was not waiting for it is the actual challenge. Which is the last question, and the hardest: how do you start? That is the subject of the next piece.
 
 [^cvss]: I have made the longer version of this argument in [The NVD is retrenching. The model it was built on was already obsolete.]({% post_url 2026-04-21-nvd-retrenchment-obsolete-model %}). The short version: treat the CVE score as one input to a decision, not the decision itself, and invest in the runtime context (reachability, blast radius, compensating controls) that a scanner looking purely for CVE patterns cannot see.
 
