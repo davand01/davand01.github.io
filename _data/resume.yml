@@ -4,71 +4,78 @@
 
 basics:
   name: David Andersson
-  title: Director of Security Engineering
-  label: Security Engineering Leader, CISSP, CISM
+  title: Security Leader
+  label: Building & Scaling Security Programs
   location: Sweden (remote)
   email: info@davidandersson.se
   website: https://www.davidandersson.se
   linkedin: https://www.linkedin.com/in/davidandersson-se
   github: https://github.com/davand01
   summary: >-
-    Information security leader with more than two decades of experience
-    spanning enterprise architecture, compliance, and engineering leadership.
-    Track record of building security programs from the ground up: from ISMS
-    design and ISO 27001 certification to scaling product security teams at
-    high-growth software companies. Equally comfortable shaping strategy at
-    the executive table and diving into technical security reviews.
+    I'm a security leader with 20+ years spanning enterprise architecture,
+    compliance and engineering leadership. I've built and scaled security
+    programs from the ground up, from ISMS design and ISO 27001
+    certification to leading full security functions at high-growth SaaS
+    companies and government agencies, and I'm equally comfortable shaping
+    strategy at the executive table or in a hands-on technical review. <br />
+    My work spans the full security function: governance that satisfies
+    auditors without becoming theatre, application security and detection
+    engineering close enough to the code that I can still read it, and the
+    leadership judgement to build a team around all of it.
   approach: >-
-    Security as a service function, not a gatekeeper. The shift from "no, you
-    can't do that" to "yes, let's find a better way to do that" is the work.
-    Best results come from addressing security early in the design phase and
-    treating engineering teams as partners, not subjects of compliance.
+    Security as a service function, not a gatekeeper. The shift from "no,
+    you can't do that" to "yes, let's find a better way" is the work, and
+    the best results come from bringing security into the design phase and
+    treating engineering teams as partners.
 
 # Three-card grid on the Experience page. Each card lists a competency area.
 competencies:
-  - title: Application Security
-    icon: encrypted
-    description: >-
-      Security architecture, secure SDLC, threat modeling, security
-      requirements engineering, and building security champion networks
-      across development organizations.
-    tags:
-      - Secure SDLC
-      - Threat Modeling
-      - CI/CD
-
-  - title: Security & Compliance
-    icon: verified_user
-    description: >-
-      ISMS implementation and review, ISO 27001/27002, risk management,
-      incident and continuity management, vendor governance, and security
-      legislation.
-    tags:
-      - ISO 27001
-      - GRC
-      - Compliance as code
-
-  - title: Engineering Leadership
+  - title: Security Program Leadership
     icon: architecture
     description: >-
-      Coaching and situational leadership, staff and budget responsibility,
-      building and scaling security teams, and driving strategic improvement
-      programs.
+      Building security functions from a single hire to full teams, leading
+      through acquisition integration, with staff, budget, and executive
+      reporting responsibility.
     tags:
-      - People Mgmt
-      - Cultural awareness
-      - Strategy
+      - Program Building
+      - M&A Integration
+      - Staff & Budget
+      - Executive Reporting
+
+  - title: Governance, Risk & Compliance
+    icon: verified_user
+    description: >-
+      ISO 27001/27002 and SOC 2 Type 2 implementation, ISMS design built
+      from scratch, protective security legislation, and audit ownership
+      across regulated and commercial environments.
+    tags:
+      - ISO 27001
+      - SOC 2
+      - ISMS
+      - Protective Security
+
+  - title: Application & Technical Security
+    icon: encrypted
+    description: >-
+      Application security across the SDLC, threat modeling, vulnerability
+      management, and detection engineering, keeping technical judgement
+      close to the work rather than delegated away.
+    tags:
+      - Application Security
+      - Threat Modeling
+      - Vulnerability Management
+      - Detection Engineering
 
 # Experience timeline, newest first. Each entry renders as a card.
 experience:
   - company: Grafana Labs AB
     title: Director of Security Engineering
     logo: grafana_labs_logo.jpeg
-    start: "2024"
+    start: "2025"
     end: Present
     location: Remote
     sector: SaaS observability, open source
-    scope: Team of 10 across two sub-teams. Staff and budget responsibility.
+    scope: Promoted from Senior Manager, Engineering in Security (Oct 2024). Team of 10 across two sub-teams. Staff and budget responsibility.
     summary: >-
       Leading a team of 10 across two sub-teams: one building VulnO11y, an
       internal observability tool for vulnerability management across the
@@ -127,21 +134,77 @@ experience:
       - Vendor Governance
       - Public Speaker
 
-  - company: Snow Software / Flexera
+  - company: Grafana Labs AB
+    title: Senior Manager, Engineering in Security
+    logo: grafana_labs_logo.jpeg
+    start: "2024"
+    end: "2025"
+    location: Remote
+    sector: SaaS observability, open source
+    scope: Built the security engineering function from the ground up. Promoted to Director.
+    summary: >-
+      Built the security engineering function supporting product development
+      and application security advisory. Established the internal advisory
+      model, scaled the AppSec toolchain, and set the vulnerability
+      management practice that later became VulnO11y. Promoted to Director
+      of Security Engineering.
+    highlights: []
+    keywords:
+      - Software Development Security
+      - Cloud Security
+      - DevSecOps
+      - Engineering Management
+      - People Management
+      - AppSec
+      - Vulnerability Management
+
+  - company: Flexera
     title: Director of Security Engineering
+    logo: flexera_logo.jpeg
+    start: "2024"
+    end: "2024"
+    location: Remote
+    sector: SaaS, software asset management
+    scope: Title aligned to Flexera's levelling structure following the acquisition of Snow Software (closed February 2024). Scaled to a team of 15 including a reporting manager.
+    summary: >-
+      Continued leading security engineering for the Snow Atlas platform when
+      Flexera's acquisition of Snow Software closed in February 2024, with
+      the title aligned to Flexera's levelling structure. Led the security
+      engineering function through acquisition and team integration, scaling
+      to a team of 15 including a reporting manager, and built out detection
+      capability across the combined estate as part of aligning Snow's
+      security operations with Flexera's.
+    highlights:
+      - Owned cloud and application security engineering across the platform, together with the Security Champions Community of Practice spanning all engineering teams.
+      - Daily operational and strategic risk management across development and production.
+      - Held monthly CTO updates on security posture and progress.
+      - Well versed in the CNCF landscape and OWASP tooling, integrating both process and tooling to mature the cloud-native Snow Atlas platform.
+    keywords:
+      - M&A Integration
+      - Acquisition Integration
+      - Detection Engineering
+      - Cross-functional Team Leadership
+      - Cloud Security
+      - Application Security
+      - Security Champions
+      - CNCF
+      - OWASP
+
+  - company: Snow Software
+    title: Head of Security Engineering
     logo: flexera_logo.jpeg
     start: "2022"
     end: "2024"
     location: Remote
     sector: SaaS, software asset management
-    scope: Grew from manager of 1 to leader of 15, including a reporting manager, through the Flexera acquisition.
+    scope: Grew from manager of 1 to a full security engineering function through to the Flexera acquisition.
     summary: >-
       Owned product security, application security, and cloud infrastructure
       security for the SaaS platform. The platform was an Azure-native,
       multi-tenant lift-and-shift of Snow Software's historic on-prem
-      product. Started as a single manager with one report, grew the
-      function, and through the Flexera acquisition scaled to leading a
-      team of 15 including a reporting manager.
+      product. Started as a single manager with one report and grew the
+      function through to Flexera's acquisition of Snow Software, which
+      closed in February 2024.
     highlights:
       - >-
         Owned the full AppSec and cloud security toolchain on Azure: SAST,
@@ -151,11 +214,9 @@ experience:
         Platform security owner for ISO 27001 certification and SOC 2 Type 2
         accreditation (Security Trust Service Criterion). Sat in audit
         interviews, collected evidence, and improved policies and SDLC
-        controls across the platform. The wider GRC and CISO function
-        orchestrated the certification programme overall.
-      - Led security engineering through the Flexera acquisition and team integration.
-      - Daily operational and strategic risk management across development and production.
-      - Held monthly CTO updates on security posture and progress.
+        controls across the platform.
+      - Established the Security Champions Community of Practice with representation from every engineering team.
+      - Aligned security into all phases of the SDLC through shift-left principles, threat modelling, team autonomy, and automated tooling.
     keywords:
       - Azure
       - Multi-tenant SaaS
@@ -172,18 +233,18 @@ experience:
       - SOC 2 Type 2
       - SOC 2 Security TSC
       - Audit Evidence
-      - M&A Integration
+      - Security Champions
       - DevSecOps
       - Application Security
 
   - company: Swedish Defence Conscription and Assessment Agency
     title: Chief Information Security Officer
     logo: rekryteringsmyndigheten_logo.jpeg
-    start: "2017"
+    start: "2019"
     end: "2022"
     location: Karlstad, Sweden
     sector: Swedish government agency, defence and protective security
-    scope: Functional CISO, working closely with the Säkerhetsskyddsorganisation and the IT team (CIO and IT enterprise architect).
+    scope: Promoted from IT Security Manager. Functional CISO, working closely with the Protective Security Organisation and the IT team (CIO and IT enterprise architect).
     summary: >-
       Acted as the functional CISO at the agency. Rebuilt the ISMS largely
       from scratch, establishing a clear separation between information
@@ -220,8 +281,56 @@ experience:
       - Government Security
       - Defence Sector
 
+  - company: Swedish Defence Conscription and Assessment Agency
+    title: IT Security Manager
+    logo: rekryteringsmyndigheten_logo.jpeg
+    start: "2017"
+    end: "2019"
+    location: Karlstad, Sweden
+    sector: Swedish government agency, defence and protective security
+    scope: Technical security architecture for both COTS and in-house development. Promoted to CISO.
+    summary: >-
+      Responsible for technical security architecture with regard to the
+      design and implementation of both COTS and in-house development.
+      Promoted to Chief Information Security Officer.
+    highlights: []
+    keywords:
+      - Security Architecture
+      - Requirements Analysis
+      - Identity and Access Management
+      - Network Security
+      - Public Sector
+
+  - company: MSB (Swedish Civil Contingencies Agency)
+    title: Information Security Specialist
+    logo: msb.png
+    start: "2021"
+    end: "2021"
+    location: Karlstad, Sweden
+    sector: Swedish government agency
+    scope: Six-month secondment from the Swedish Defence Conscription and Assessment Agency.
+    summary: >-
+      Six-month secondment from the Swedish Defence Conscription and
+      Assessment Agency to MSB's information security function. Worked on
+      defining the national nomenclature for information security,
+      establishing Swedish-language terminology for concepts that had until
+      then been used inconsistently across agencies. The work was later
+      published as Termbanken, the reference terminology bank for
+      information security in Swedish public administration. Also
+      contributed to the security work on Ena, Sweden's national digital
+      infrastructure programme developed jointly by Digg, MSB, and other
+      agencies to standardise secure data exchange, identity management, and
+      cross-agency collaboration across the public sector.
+    highlights: []
+    keywords:
+      - Standards Development
+      - Terminology
+      - Technical Writing
+      - Public Sector
+      - National Infrastructure
+
   - company: Versitile Consulting AB
-    title: Senior Consultant, Information Security
+    title: Principal Security Consultant
     logo: versitile.png
     start: "2015"
     end: Present
@@ -342,7 +451,7 @@ experience:
       - Security Assessment
 
   - company: Veriscan Security AB
-    title: Information Security Consultant
+    title: Technical Information Security Consultant
     logo: veriscan.png
     start: "2007"
     end: "2011"
