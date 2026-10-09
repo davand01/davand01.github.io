@@ -123,22 +123,22 @@ layout: home-page
 <section class="py-32 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="bg-on-surface p-12 md:p-24 rounded-sm relative overflow-hidden">
-      <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <div class="absolute inset-0 opacity-10 pointer-events-none" aria-hidden="true">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/></pattern></defs>
           <rect width="100%" height="100%" fill="url(#grid)"/>
         </svg>
       </div>
       <div class="relative z-10 max-w-2xl">
-        <h2 class="font-headline text-4xl md:text-5xl font-bold text-on-primary mb-8 tracking-tighter">Let's talk security.</h2>
-        <p class="text-on-secondary-container text-lg mb-12 opacity-80">Available for consulting engagements, advisory roles, and speaking opportunities. Let's find the right fit.</p>
-        <div class="flex flex-col sm:flex-row gap-6">
-          <a href="{{ relativebase }}contact.html" class="bg-gradient-to-br from-tertiary to-tertiary-dim text-on-tertiary px-8 py-4 font-label font-bold text-sm tracking-widest uppercase rounded-sm hover:opacity-90 transition-all flex items-center justify-center no-underline">
+        <h2 class="font-headline text-4xl md:text-5xl font-bold text-on-primary mb-6 tracking-tighter">Let's talk security.</h2>
+        <p class="text-secondary-fixed-dim text-lg leading-relaxed mb-12">Open to speaking engagements, expert commentary and conversations about security leadership. Tell me what you have in mind.</p>
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+          <a href="{{ relativebase }}contact.html" class="bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim transition-colors px-8 py-4 font-label font-bold text-sm tracking-widest uppercase rounded-sm flex items-center justify-center no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary-fixed">
             Get in Touch
             <span class="material-symbols-outlined ml-3 text-[18px]">send</span>
           </a>
-          <a href="{{ relativebase }}resume.html" class="border border-outline-variant/30 text-on-primary px-8 py-4 font-label font-bold text-sm tracking-widest uppercase rounded-sm hover:bg-white/5 transition-all no-underline text-center">
-            View Experience
+          <a href="{{ relativebase }}speaking.html" class="border border-outline-variant/50 text-on-primary hover:bg-white/10 transition-colors px-8 py-4 font-label font-bold text-sm tracking-widest uppercase rounded-sm text-center no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary-fixed">
+            Speaking &amp; Media
           </a>
         </div>
       </div>
