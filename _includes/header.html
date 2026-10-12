@@ -4,10 +4,11 @@
 <header class="fixed top-0 w-full z-50 bg-[#f7f9fb]/80 backdrop-blur-xl bg-gradient-to-b from-slate-100/50 to-transparent">
   <nav class="max-w-7xl mx-auto flex justify-between items-center px-8 py-6">
     <a href="{{ relativebase }}" class="text-xl font-bold tracking-tighter text-slate-900 font-headline no-underline">{{ site.title }}</a>
-    <div class="hidden md:flex items-center gap-10">
+    <div class="hidden md:flex items-center gap-6 whitespace-nowrap lg:gap-10">
       <a class="font-headline tracking-tight text-sm uppercase font-semibold transition-colors no-underline {% if page.url == '/' or page.url == '/index.html' %}text-slate-900 border-b-2 border-tertiary pb-1{% else %}text-slate-500 hover:text-slate-900{% endif %}" href="{{ relativebase }}">Home</a>
       <a class="font-headline tracking-tight text-sm uppercase font-semibold transition-colors no-underline {% if page.url contains 'resume' %}text-slate-900 border-b-2 border-tertiary pb-1{% else %}text-slate-500 hover:text-slate-900{% endif %}" href="{{ relativebase }}resume.html">Experience</a>
       <a class="font-headline tracking-tight text-sm uppercase font-semibold transition-colors no-underline {% if page.url contains 'archive' or page.layout == 'post' %}text-slate-900 border-b-2 border-tertiary pb-1{% else %}text-slate-500 hover:text-slate-900{% endif %}" href="{{ relativebase }}archive.html">Blog</a>
+      <a class="font-headline tracking-tight text-sm uppercase font-semibold transition-colors no-underline {% if page.url contains 'speaking' %}text-slate-900 border-b-2 border-tertiary pb-1{% else %}text-slate-500 hover:text-slate-900{% endif %}" href="{{ relativebase }}speaking.html">Speaking &amp; Media</a>
       <a class="font-headline tracking-tight text-sm uppercase font-semibold transition-colors no-underline {% if page.url contains 'contact' %}text-slate-900 border-b-2 border-tertiary pb-1{% else %}text-slate-500 hover:text-slate-900{% endif %}" href="{{ relativebase }}contact.html">Contact</a>
     </div>
     <div class="flex items-center gap-4">
@@ -31,6 +32,7 @@
     <a class="block py-3 font-headline text-sm uppercase font-semibold text-slate-700 no-underline" href="{{ relativebase }}">Home</a>
     <a class="block py-3 font-headline text-sm uppercase font-semibold text-slate-700 no-underline" href="{{ relativebase }}resume.html">Experience</a>
     <a class="block py-3 font-headline text-sm uppercase font-semibold text-slate-700 no-underline" href="{{ relativebase }}archive.html">Blog</a>
+    <a class="block py-3 font-headline text-sm uppercase font-semibold text-slate-700 no-underline" href="{{ relativebase }}speaking.html">Speaking &amp; Media</a>
     <a class="block py-3 font-headline text-sm uppercase font-semibold text-slate-700 no-underline" href="{{ relativebase }}contact.html">Contact</a>
   </div>
 </header>
