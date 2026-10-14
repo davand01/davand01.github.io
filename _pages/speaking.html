@@ -1,0 +1,118 @@
+---
+layout: menu-page
+title: "Speaking & Media"
+description: Talks, panels and expert commentary on security leadership, application security and incident response.
+permalink: speaking:output_ext
+---
+{% include calculate_relative_base.html %}
+
+<section class="max-w-7xl mx-auto px-8">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+
+    <div class="md:col-span-7">
+      <div class="mb-20">
+        <h2 class="font-headline text-3xl font-bold tracking-tight text-on-surface mb-8">Bio</h2>
+        <div class="space-y-8">
+          <div>
+            <span class="font-label text-[10px] font-bold tracking-widest text-outline uppercase block mb-2">One line</span>
+            <p class="text-on-surface-variant leading-relaxed">David Andersson is a security engineering leader with more than twenty years of experience building and scaling security programmes in software companies, government agencies and global enterprises.</p>
+          </div>
+          <div>
+            <span class="font-label text-[10px] font-bold tracking-widest text-outline uppercase block mb-2">Short</span>
+            <p class="text-on-surface-variant leading-relaxed">David Andersson is a security engineering leader with more than twenty years of experience, from a Swedish government agency to high-growth SaaS. He has built security functions from the ground up and works across application security, vulnerability management, incident response and governance. He holds CISSP and CISM certifications and has spoken at OWASP Global AppSec EU 2025 and GrafanaCON 2026.</p>
+          </div>
+          <div>
+            <span class="font-label text-[10px] font-bold tracking-widest text-outline uppercase block mb-2">Long</span>
+            <div class="space-y-4">
+              <p class="text-on-surface-variant leading-relaxed">David Andersson is a security engineering leader with more than twenty years of experience, from a Swedish government agency to high-growth SaaS. He has built security functions from the ground up and works across application security, vulnerability management, incident response and governance. He holds CISSP and CISM certifications and has spoken at OWASP Global AppSec EU 2025 and GrafanaCON 2026.</p>
+              <p class="text-on-surface-variant leading-relaxed">His background spans technical security consulting, public sector protective security and CISO work, and security engineering leadership at software companies. He approaches security as a service function, not a gatekeeper, and keeps technical judgement close to the work. He represented Sweden in SIS TK 318, the standardisation committee for the ISO 27000 family.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-20">
+        <h2 class="font-headline text-3xl font-bold tracking-tight text-on-surface mb-8">Talk topics</h2>
+        <div class="grid grid-cols-1 gap-8">
+          <div class="bg-surface-container-lowest p-10 flex flex-col h-full border-l-4 border-tertiary">
+            <span class="material-symbols-outlined text-tertiary mb-8 text-4xl">account_tree</span>
+            <h3 class="font-headline text-2xl font-bold mb-4">Security as a service, with a boundary</h3>
+            <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">Why gatekeeping gets routed around, and why saying yes without analysis is no better. A practical model for risk acceptance: what is not negotiable, what is designed together, and who owns the decision.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-wider rounded-sm">Security leadership</span>
+              <span class="px-2 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-wider rounded-sm">Risk</span>
+            </div>
+          </div>
+          <div class="bg-surface-container-lowest p-10 flex flex-col h-full border-l-4 border-tertiary">
+            <span class="material-symbols-outlined text-tertiary mb-8 text-4xl">encrypted</span>
+            <h3 class="font-headline text-2xl font-bold mb-4">Lessons from a CI/CD supply chain incident</h3>
+            <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">How one small workflow misconfiguration was found within hours thanks to canary tokens, and why preparation beats reaction. Based on the GrafanaCON 2026 talk.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-wider rounded-sm">Incident response</span>
+              <span class="px-2 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-wider rounded-sm">CI/CD</span>
+            </div>
+          </div>
+          <div class="bg-surface-container-lowest p-10 flex flex-col h-full border-l-4 border-tertiary">
+            <span class="material-symbols-outlined text-tertiary mb-8 text-4xl">security</span>
+            <h3 class="font-headline text-2xl font-bold mb-4">Vulnerability management beyond the score</h3>
+            <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">Treating the vulnerability lifecycle as a state machine, from detection through disclosure to remediation, and why a severity rating alone makes a poor prioritisation model.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-wider rounded-sm">Vulnerability management</span>
+              <span class="px-2 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-wider rounded-sm">AppSec</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% if site.tags.speaking %}
+      {% assign talks = site.tags.speaking | sort: "talk_date" | reverse %}
+      {% if talks.size > 0 %}
+      <div>
+        <h2 class="font-headline text-3xl font-bold tracking-tight text-on-surface mb-8">Past talks</h2>
+        <div class="flex flex-col divide-y divide-outline-variant/10">
+          {% for post in talks %}
+          {% capture p_url %}{{ relativebase }}{{ post.url }}{% endcapture %}
+          {% assign p_url = p_url | replace: "//", "/" %}
+          <a href="{{ p_url }}" class="py-8 first:pt-0 group cursor-pointer block no-underline">
+            <span class="font-label text-[10px] font-bold tracking-widest text-outline uppercase mb-3 block">{{ post.talk_date | date: "%B %-d, %Y" }}</span>
+            <h4 class="font-headline text-xl font-bold text-on-surface group-hover:text-primary transition-colors">{{ post.title }}</h4>
+            <p class="text-sm text-on-surface-variant mt-2 line-clamp-2">{{ post.description }}</p>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      {% endif %}
+    </div>
+
+    <div class="md:col-span-5">
+      <div class="bg-surface-container-low p-8 rounded-sm sticky top-32">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="material-symbols-outlined text-tertiary" style="font-size:28px; font-variation-settings: 'FILL' 1;">mic</span>
+          <h3 class="font-headline text-xl font-bold">Book a talk</h3>
+        </div>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+          For conferences, meetups, panels and podcasts. It helps if you include the event and date, the audience, the format and length, and whether it is in person or remote.
+        </p>
+        <a href="mailto:{{ site.email }}?subject=Speaking%20enquiry" class="flex items-center justify-center gap-2 w-full bg-gradient-to-br from-tertiary to-tertiary-dim text-on-tertiary px-6 py-3 font-label font-bold text-xs tracking-widest uppercase rounded-sm hover:opacity-90 transition-all no-underline">
+          <span class="material-symbols-outlined text-[16px]">mail</span>
+          Send enquiry
+        </a>
+
+        <div class="mt-10 pt-8 border-t border-outline-variant/20">
+          <h3 class="font-headline text-xl font-bold mb-4">Media</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed mb-4">
+            I am happy to comment as an independent security expert on vulnerability management, application security, incident response and security leadership. My comments are my own and are not made on behalf of any employer. I do not comment on ongoing incidents at other organisations.
+          </p>
+          <a href="mailto:{{ site.email }}?subject=Media%20enquiry" class="text-tertiary font-semibold text-sm tracking-wide hover:underline no-underline">{{ site.email }}</a>
+        </div>
+
+        <div class="mt-10 pt-8 border-t border-outline-variant/20">
+          <h3 class="font-headline text-xl font-bold mb-4">Press kit</h3>
+          <a href="{{ relativebase }}assets/img/david.png" download class="text-tertiary font-semibold text-sm tracking-wide hover:underline no-underline">High-resolution portrait (PNG, 1537x1023)</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
